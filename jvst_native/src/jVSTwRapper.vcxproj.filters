@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{5a1d6fed-fac4-4136-8a96-ef7dbeb8936e}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Source Files\ladspa">
+      <UniqueIdentifier>{83217b53-ee46-4974-b7a6-f83ea21f59bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Config Files">
+      <UniqueIdentifier>{55658c06-0f22-4c2a-9f35-c8720ed3bcab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VST Files">
+      <UniqueIdentifier>{eb8da3dc-3b36-4c73-81b3-94b7f9f19386}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VST Files\vstgui">
+      <UniqueIdentifier>{2b5a1f34-15b4-46c0-8b29-ddd79e65c6a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VST Files\pluginterfaces">
+      <UniqueIdentifier>{a6d5b8cf-b9b8-4f96-a910-a47023886d5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VST Files\public.sdk">
+      <UniqueIdentifier>{89367dbc-1fc6-4cf8-9707-cf5c2e280e18}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\ConfigFileReader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\JNIUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\jVSTwRapperMAIN.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VSTGUIWrapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VSTV10ToHost.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VSTV10ToPlug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VSTV20ToHost.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VSTV20ToPlug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VSTV21ToHost.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VSTV21ToPlug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VSTV22ToHost.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VSTV22ToPlug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VSTV23ToHost.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VSTV23ToPlug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VSTV24ToHost.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VSTV24ToPlug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ladspa\jLADSPAwRapperMAIN.cpp">
+      <Filter>Source Files\ladspa</Filter>
+    </ClCompile>
+    <ClCompile Include="src\vstgui\aeffguieditor.cpp">
+      <Filter>VST Files\vstgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\vstgui\cfileselector.cpp">
+      <Filter>VST Files\vstgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\vstgui\cscrollview.cpp">
+      <Filter>VST Files\vstgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\vstgui\ctabview.cpp">
+      <Filter>VST Files\vstgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\vstgui\vstcontrols.cpp">
+      <Filter>VST Files\vstgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\vstgui\vstgui.cpp">
+      <Filter>VST Files\vstgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\public.sdk\vst2.x\audioeffect.cpp">
+      <Filter>VST Files\public.sdk</Filter>
+    </ClCompile>
+    <ClCompile Include="src\public.sdk\vst2.x\audioeffectx.cpp">
+      <Filter>VST Files\public.sdk</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ConfigFileReader.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\JNIUtils.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\jVSTwRapperMAIN.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VSTGUIWrapper.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VSTV10ToHost.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VSTV10ToPlug.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VSTV20ToHost.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VSTV20ToPlug.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VSTV21ToHost.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VSTV21ToPlug.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VSTV22ToHost.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VSTV22ToPlug.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VSTV23ToHost.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VSTV23ToPlug.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VSTV24ToHost.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VSTV24ToPlug.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ladspa\ladspa.h">
+      <Filter>Source Files\ladspa</Filter>
+    </ClInclude>
+    <ClInclude Include="src\vstgui\aeffguieditor.h">
+      <Filter>VST Files\vstgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\vstgui\cfileselector.h">
+      <Filter>VST Files\vstgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\vstgui\cscrollview.h">
+      <Filter>VST Files\vstgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\vstgui\ctabview.h">
+      <Filter>VST Files\vstgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\vstgui\vstcontrols.h">
+      <Filter>VST Files\vstgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\vstgui\vstgui.h">
+      <Filter>VST Files\vstgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\vstgui\vstkeycode.h">
+      <Filter>VST Files\vstgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\vstgui\vstplugscarbon.h">
+      <Filter>VST Files\vstgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\vstgui\vstplugsmac.h">
+      <Filter>VST Files\vstgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\vstgui\vstplugsmacho.h">
+      <Filter>VST Files\vstgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\vstgui\vstplugsquartz.h">
+      <Filter>VST Files\vstgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pluginterfaces\vst2.x\aeffect.h">
+      <Filter>VST Files\pluginterfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pluginterfaces\vst2.x\aeffectx.h">
+      <Filter>VST Files\pluginterfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pluginterfaces\vst2.x\vstfxstore.h">
+      <Filter>VST Files\pluginterfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="src\public.sdk\vst2.x\aeffeditor.h">
+      <Filter>VST Files\public.sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\public.sdk\vst2.x\audioeffect.h">
+      <Filter>VST Files\public.sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\public.sdk\vst2.x\audioeffectx.h">
+      <Filter>VST Files\public.sdk</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\conf\jvstwrapper_linux.ini">
+      <Filter>Config Files</Filter>
+    </None>
+    <None Include="src\conf\jVSTwRapper_win.ini">
+      <Filter>Config Files</Filter>
+    </None>
+    <None Include="src\conf\libjvstwrapper.jnilib.ini">
+      <Filter>Config Files</Filter>
+    </None>
+    <None Include="src\vstgui\Changelog">
+      <Filter>VST Files\vstgui</Filter>
+    </None>
+    <None Include="src\jVSTwRapper.def">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\jVSTwRapper.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
