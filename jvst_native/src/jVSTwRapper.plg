@@ -1,0 +1,89 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: jVSTwRapper - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "c:\temp\RSPAB6.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "JVSTWRAPPER_EXPORTS" /Fp"Release/jVSTwRapper.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\data\private\jvstwrapper\dll\src\ConfigFileReader.cpp"
+"C:\data\private\jvstwrapper\dll\src\JNIUtils.cpp"
+"C:\data\private\jvstwrapper\dll\src\jVSTwRapperMAIN.cpp"
+"C:\data\private\jvstwrapper\dll\src\VSTGUIWrapper.cpp"
+"C:\data\private\jvstwrapper\dll\src\VSTV10ToHost.cpp"
+"C:\data\private\jvstwrapper\dll\src\VSTV10ToPlug.cpp"
+"C:\data\private\jvstwrapper\dll\src\VSTV20ToHost.cpp"
+"C:\data\private\jvstwrapper\dll\src\VSTV20ToPlug.cpp"
+"C:\data\private\jvstwrapper\dll\src\VSTV21ToHost.cpp"
+"C:\data\private\jvstwrapper\dll\src\VSTV21ToPlug.cpp"
+"C:\data\private\jvstwrapper\dll\src\VSTV22ToHost.cpp"
+"C:\data\private\jvstwrapper\dll\src\VSTV22ToPlug.cpp"
+"C:\data\private\jvstwrapper\dll\src\VSTV23ToHost.cpp"
+"C:\data\private\jvstwrapper\dll\src\VSTV23ToPlug.cpp"
+"C:\data\private\jvstwrapper\dll\src\vst\AudioEffect.cpp"
+"C:\data\private\jvstwrapper\dll\src\vst\audioeffectx.cpp"
+"C:\data\private\jvstwrapper\dll\src\vst\aeffguieditor.cpp"
+"C:\data\private\jvstwrapper\dll\src\vst\vstcontrols.cpp"
+"C:\data\private\jvstwrapper\dll\src\vst\vstgui.cpp"
+]
+Creating command line "cl.exe @c:\temp\RSPAB6.tmp" 
+Creating temporary file "c:\temp\RSPAB7.tmp" with contents
+[
+odbc32.lib odbccp32.lib kernel32.lib comdlg32.lib shell32.lib user32.lib gdi32.lib winspool.lib advapi32.lib ole32.lib oleaut32.lib uuid.lib /nologo /dll /incremental:no /pdb:"Release/jVSTwRapper.pdb" /machine:I386 /def:".\src\jVSTwRapper.def" /out:"Release/jVSTwRapper.dll" /implib:"Release/jVSTwRapper.lib" 
+.\Release\ConfigFileReader.obj
+.\Release\JNIUtils.obj
+.\Release\jVSTwRapperMAIN.obj
+.\Release\VSTGUIWrapper.obj
+.\Release\VSTV10ToHost.obj
+.\Release\VSTV10ToPlug.obj
+.\Release\VSTV20ToHost.obj
+.\Release\VSTV20ToPlug.obj
+.\Release\VSTV21ToHost.obj
+.\Release\VSTV21ToPlug.obj
+.\Release\VSTV22ToHost.obj
+.\Release\VSTV22ToPlug.obj
+.\Release\VSTV23ToHost.obj
+.\Release\VSTV23ToPlug.obj
+.\Release\AudioEffect.obj
+.\Release\audioeffectx.obj
+.\Release\aeffguieditor.obj
+.\Release\vstcontrols.obj
+.\Release\vstgui.obj
+]
+Creating command line "link.exe @c:\temp\RSPAB7.tmp"
+<h3>Output Window</h3>
+Compiling...
+ConfigFileReader.cpp
+JNIUtils.cpp
+jVSTwRapperMAIN.cpp
+VSTGUIWrapper.cpp
+VSTV10ToHost.cpp
+VSTV10ToPlug.cpp
+VSTV20ToHost.cpp
+VSTV20ToPlug.cpp
+VSTV21ToHost.cpp
+VSTV21ToPlug.cpp
+VSTV22ToHost.cpp
+VSTV22ToPlug.cpp
+VSTV23ToHost.cpp
+VSTV23ToPlug.cpp
+AudioEffect.cpp
+audioeffectx.cpp
+aeffguieditor.cpp
+vstcontrols.cpp
+vstgui.cpp
+Linking...
+   Creating library Release/jVSTwRapper.lib and object Release/jVSTwRapper.exp
+LINK : warning LNK4089: all references to "SHELL32.dll" discarded by /OPT:REF
+LINK : warning LNK4089: all references to "comdlg32.dll" discarded by /OPT:REF
+
+
+
+<h3>Results</h3>
+jVSTwRapper.dll - 0 error(s), 2 warning(s)
+</pre>
+</body>
+</html>

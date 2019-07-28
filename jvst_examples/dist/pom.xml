@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>net.sourceforge.jvstwrapper</groupId>
+	<artifactId>JayDLay</artifactId>
+	<name>JayDLay</name>
+	<version>0.8</version>
+	<url>http://jvstwrapper.sourceforge.net/</url>
+	
+	<licenses>
+		<license>
+		<name>GNU Lesser General Public License</name>
+		<url>http://www.gnu.org/licenses/lgpl.txt</url>
+		</license>
+	</licenses>
+
+	<scm>
+    	<connection>scm:cvs:pserver:anonymous:@jvstwrapper.cvs.sourceforge.net:/cvsroot/jvstwrapper:jvst_examples</connection>
+    	<url>http://jvstwrapper.cvs.sourceforge.net/jvstwrapper/jvst_examples/</url>
+  	</scm>
+    
+	<repositories>
+    	<repository>
+      		<id>jVSTwRapperRepo</id>
+      		<name>jVSTwRapper Repository</name>
+      		<url>http://jvstwrapper.sourceforge.net/maven2</url>
+      		<layout>default</layout>
+    	</repository>
+  	</repositories>
+  
+	<build>
+		<sourceDirectory>../src</sourceDirectory>
+	
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.4</source>
+					<target>1.4</target>
+				</configuration>
+			</plugin>
+			
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptors>
+						<descriptor>vstplugin_win.xml</descriptor>
+						<descriptor>vstplugin_osx.xml</descriptor>
+						<descriptor>vstplugin_linux.xml</descriptor>
+					</descriptors>
+				</configuration>
+			</plugin>
+			
+			<!-- 
+			<plugin>
+		    	<groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-scm-plugin</artifactId>
+		        <configuration>
+		        	<providerImplementations>
+		            	<cvs>cvs_native</cvs>
+		          	</providerImplementations>
+		        </configuration>
+	 		</plugin>
+	 		-->
+		</plugins>
+	</build>
+	
+	<dependencies>
+		<dependency>
+			<groupId>net.sourceforge.jvstwrapper</groupId>
+			<artifactId>jVSTwRapper</artifactId>
+			<version>0.9g</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sourceforge.jvstwrapper</groupId>
+			<artifactId>jVSTsYstem</artifactId>
+			<version>0.9g</version>
+		</dependency> 
+		<dependency>
+			<groupId>net.sourceforge.napkinlaf</groupId>
+			<artifactId>napkinlaf</artifactId>
+			<version>1.0</version>
+		</dependency> 
+	</dependencies>
+</project>

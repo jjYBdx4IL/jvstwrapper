@@ -1,0 +1,33 @@
+
+Download the latest .zip file for _MAC OSX_ from http://sourceforge.net/project/showfiles.php?group_id=92192
+and extract it to this directory. 
+
+NOTE: You may need to rename the directory that is created from "jVSTwRapper_vXX" to "jVSTwRapper"
+      You can ignore all other files and directories from the extracted .zip file. Only those listed 
+	  below are used (the rest is downloaded from the jvstwrapper maven repository).
+	  
+For any details, please check vstplugin_osx.xml	  
+	  
+The expected directory layout is as follows:
+
+.
+|   HOW_TO.txt
+|   Info.plist
+|   libjvstwrapper.jnilib.ini
+|
+\---jVSTwRapper
+    \---jvstwrapper.vst
+       \---Contents
+            |   Info.plist
+            |   PkgInfo
+            |
+            +---MacOS
+            |       libjvstwrapper.jnilib
+            |
+            \---Resources
+                    bmp00128.bmp
+                    bmp00129.bmp
+                    jvstwrapper.icns
+	
+	
+NOTE 2: If you want to use and distribute your plugin as AUDIO UNIT (AU), follow the steps described at http://jvstwrapper.sourceforge.net/#au

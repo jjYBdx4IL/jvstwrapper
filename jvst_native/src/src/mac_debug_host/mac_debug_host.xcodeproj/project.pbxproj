@@ -1,0 +1,236 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C3C70EE80B457B5800DA1076 /* minieditor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3C70ECE0B457A2500DA1076 /* minieditor.cpp */; };
+		C3C70EE90B457B5800DA1076 /* minihost.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3C70ECF0B457A2500DA1076 /* minihost.cpp */; };
+		C3C70EEC0B457B8300DA1076 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C70EEB0B457B8300DA1076 /* Carbon.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C3C70ECE0B457A2500DA1076 /* minieditor.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = minieditor.cpp; sourceTree = "<group>"; };
+		C3C70ECF0B457A2500DA1076 /* minihost.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = minihost.cpp; sourceTree = "<group>"; };
+		C3C70ED40B457A9E00DA1076 /* aeffect.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = aeffect.h; sourceTree = "<group>"; };
+		C3C70ED50B457A9E00DA1076 /* aeffectx.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = aeffectx.h; sourceTree = "<group>"; };
+		C3C70ED60B457A9E00DA1076 /* vstfxstore.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = vstfxstore.h; sourceTree = "<group>"; };
+		C3C70EE10B457B2000DA1076 /* minihost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = minihost.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3C70EE40B457B2000DA1076 /* minihost-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "minihost-Info.plist"; sourceTree = "<group>"; };
+		C3C70EEB0B457B8300DA1076 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C3C70EDF0B457B2000DA1076 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3C70EEC0B457B8300DA1076 /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C3C70EBD0B4579A800DA1076 = {
+			isa = PBXGroup;
+			children = (
+				C3C70EEA0B457B6B00DA1076 /* frameworks */,
+				C3C70ED20B457A9E00DA1076 /* pluginterfaces */,
+				C3C70ECD0B4579F600DA1076 /* source */,
+				C3C70EE20B457B2000DA1076 /* Products */,
+				C3C70EE40B457B2000DA1076 /* minihost-Info.plist */,
+			);
+			sourceTree = "<group>";
+		};
+		C3C70ECD0B4579F600DA1076 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				C3C70ECE0B457A2500DA1076 /* minieditor.cpp */,
+				C3C70ECF0B457A2500DA1076 /* minihost.cpp */,
+			);
+			name = source;
+			sourceTree = "<group>";
+		};
+		C3C70ED20B457A9E00DA1076 /* pluginterfaces */ = {
+			isa = PBXGroup;
+			children = (
+				C3C70ED30B457A9E00DA1076 /* vst2.x */,
+			);
+			name = pluginterfaces;
+			path = ../pluginterfaces;
+			sourceTree = SOURCE_ROOT;
+		};
+		C3C70ED30B457A9E00DA1076 /* vst2.x */ = {
+			isa = PBXGroup;
+			children = (
+				C3C70ED40B457A9E00DA1076 /* aeffect.h */,
+				C3C70ED50B457A9E00DA1076 /* aeffectx.h */,
+				C3C70ED60B457A9E00DA1076 /* vstfxstore.h */,
+			);
+			path = vst2.x;
+			sourceTree = "<group>";
+		};
+		C3C70EE20B457B2000DA1076 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C3C70EE10B457B2000DA1076 /* minihost.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C3C70EEA0B457B6B00DA1076 /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3C70EEB0B457B8300DA1076 /* Carbon.framework */,
+			);
+			name = frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C3C70EE00B457B2000DA1076 /* minihost */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3C70EE50B457B2200DA1076 /* Build configuration list for PBXNativeTarget "minihost" */;
+			buildPhases = (
+				C3C70EDD0B457B2000DA1076 /* Resources */,
+				C3C70EDE0B457B2000DA1076 /* Sources */,
+				C3C70EDF0B457B2000DA1076 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = minihost;
+			productName = minihost;
+			productReference = C3C70EE10B457B2000DA1076 /* minihost.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C3C70EBF0B4579A800DA1076 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C3C70EC00B4579A800DA1076 /* Build configuration list for PBXProject "mac_debug_host" */;
+			hasScannedForEncodings = 0;
+			mainGroup = C3C70EBD0B4579A800DA1076;
+			productRefGroup = C3C70EE20B457B2000DA1076 /* Products */;
+			projectDirPath = "";
+			targets = (
+				C3C70EE00B457B2000DA1076 /* minihost */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C3C70EDD0B457B2000DA1076 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C3C70EDE0B457B2000DA1076 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3C70EE80B457B5800DA1076 /* minieditor.cpp in Sources */,
+				C3C70EE90B457B5800DA1076 /* minihost.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C3C70EC10B4579A800DA1076 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		C3C70EC20B4579A800DA1076 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+			};
+			name = Release;
+		};
+		C3C70EE60B457B2200DA1076 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
+				INFOPLIST_FILE = "minihost-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Carbon,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = minihost;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C3C70EE70B457B2200DA1076 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
+				INFOPLIST_FILE = "minihost-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Carbon,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = minihost;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C3C70EC00B4579A800DA1076 /* Build configuration list for PBXProject "mac_debug_host" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3C70EC10B4579A800DA1076 /* Debug */,
+				C3C70EC20B4579A800DA1076 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3C70EE50B457B2200DA1076 /* Build configuration list for PBXNativeTarget "minihost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3C70EE60B457B2200DA1076 /* Debug */,
+				C3C70EE70B457B2200DA1076 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C3C70EBF0B4579A800DA1076 /* Project object */;
+}

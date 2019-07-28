@@ -1,0 +1,19 @@
+
+Download the latest .zip file for _WINDOWS_ from http://sourceforge.net/project/showfiles.php?group_id=92192
+and extract it to this directory. 
+
+NOTE: You may need to rename the directory that is created from "jVSTwRapper_vXX" to "jVSTwRapper"
+      Also, you may need to rename (i.e. remove the version part of) jVSTwRapper-XXX.dll to jVSTwRapper.dll
+      You can ignore all other files and directories from the extracted .zip file. Only those listed 
+	  below are used (the rest is downloaded from the jvstwrapper maven repository).
+
+For any details, please check vstplugin_win.xml
+	  
+The expected directory layout is as follows:
+
+.
+|   HOW_TO.txt
+|   JayDLay.ini
+|
+\---jVSTwRapper
+        jVSTwRapper.dll       	<--- YOU MAY NEED TO RENAME THIS FILE FROM jVSTwRapper-XXX.dll TO jVSTwRapper.dll

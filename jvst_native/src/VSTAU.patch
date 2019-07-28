@@ -1,0 +1,330 @@
+Index: VSTAU.cpp
+===================================================================
+--- VSTAU.cpp	(revision 97)
++++ VSTAU.cpp	(working copy)
+@@ -4,6 +4,7 @@
+ #include "VSTLoader.h"
+ #include "VSTAU.h"
+ #include <AudioUnit/AudioUnitCarbonView.h>
++#include <pwd.h>
+ 
+ // Maximum number of VstEvents dispatched per buffer processed:
+ #define kMaxEventsPerSlice		(256 - 8)	// To make sizeof(mEvents) == 256
+@@ -13,6 +14,129 @@
+ 
+ using namespace std;
+ 
++
++//taken from http://developer.apple.com/qa/qa2007/qa1549.html
++static CFURLRef CreateURLByExpandingTildePath(
++    CFStringRef     path,
++    Boolean         isDir
++)
++{
++    CFURLRef        result = NULL, baseURL = NULL;
++    CFStringRef     urlPath = NULL;
++    Boolean         relative;
++
++    assert(path != NULL);
++
++    if ( ! CFStringHasPrefix(path, CFSTR("~")) )
++    {
++        // No leading "~", so use path as the entire path.
++        urlPath = CFStringCreateCopy(kCFAllocatorDefault, path);
++        relative = false;
++    } else {
++        CFIndex     pathLen;
++        Boolean     foundSlash;
++        CFRange     foundRange = {kCFNotFound,0};
++        CFIndex     userNameLengthUTF16;
++
++        relative = true;
++
++        pathLen = CFStringGetLength(path);
++        foundSlash = CFStringFindWithOptions(
++            path,
++            CFSTR("/"),
++            CFRangeMake(1, pathLen-1),
++            0,
++            &foundRange
++        );
++        if (foundSlash) {
++            userNameLengthUTF16 = foundRange.location - 1;
++            urlPath = CFStringCreateWithSubstring(
++                NULL,
++                path,
++                CFRangeMake(
++                    foundRange.location + 1,    // +1 to exclude the slash
++                    pathLen - (foundRange.location + 1)
++                )
++                );
++        } else {
++            userNameLengthUTF16 = pathLen - 1;
++            urlPath = CFStringCreateWithCharacters(NULL, NULL, 0);
++        }
++        if (urlPath != NULL) {
++            char            userNameUTF8[
++                CFStringGetMaximumSizeForEncoding(
++                    userNameLengthUTF16,
++                    kCFStringEncodingUTF8) + 1  // +1 for terminating null
++            ];
++            CFIndex         convertedCountUTF16;
++            CFIndex         userNameLengthUTF8;
++            struct passwd * pw;
++
++            convertedCountUTF16 = CFStringGetBytes(
++                path,
++                CFRangeMake(1, userNameLengthUTF16),
++                kCFStringEncodingUTF8,
++                0,
++                false,
++                (UInt8 *) userNameUTF8,
++                sizeof(userNameUTF8),
++                &userNameLengthUTF8
++            );
++            assert(convertedCountUTF16 == userNameLengthUTF16);
++            assert(userNameLengthUTF8 < sizeof(userNameUTF8));
++            userNameUTF8[userNameLengthUTF8] = 0;
++
++            if (userNameLengthUTF8 == 0) {
++                 pw = getpwuid( getuid() );
++            } else {
++                 pw = getpwnam(userNameUTF8);
++            }
++            if (pw != NULL) {
++                baseURL = CFURLCreateFromFileSystemRepresentation(
++                    NULL,
++                    (const UInt8 *) pw->pw_dir,
++                    strlen(pw->pw_dir),
++                    true
++                );
++            }
++        }
++    }
++
++    if (urlPath != NULL) {
++        if ( ! relative ) {
++            result = CFURLCreateWithFileSystemPath(
++                NULL,
++                urlPath,
++                kCFURLPOSIXPathStyle,
++                isDir
++            );
++        } else if ( baseURL != NULL ) {
++            if ( CFStringGetLength(urlPath) == 0 ) {
++                result = baseURL;
++                CFRetain(result);
++            } else {
++                result = CFURLCreateWithFileSystemPathRelativeToBase(
++                    NULL,
++                    urlPath,
++                    kCFURLPOSIXPathStyle,
++                    isDir,
++                    baseURL
++                );
++            }
++        }
++    }
++
++    if (urlPath != NULL) {
++        CFRelease(urlPath);
++    }
++    if (baseURL != NULL) {
++        CFRelease(baseURL);
++    }
++
++    return result;
++}
++
++
+ #if AU_DEBUG_DISPATCHER
+ class VSTAUDebugDispatcher : public AUDebugDispatcher
+ {
+@@ -158,8 +282,8 @@
+ 	CFRelease(bundleIdentifier);
+ 
+ 	// Look up the plug-in's path in our bundle's properties:
+-	CFStringRef effectPath = (CFStringRef)CFBundleGetValueForInfoDictionaryKey(plugInBundle, kVSTAUPlugInPathKey);
+-	if (!effectPath)
++	CFStringRef effectName = (CFStringRef)CFBundleGetValueForInfoDictionaryKey(plugInBundle, kVSTAUPlugInPathKey);
++	if (!effectName)
+ 	{
+ 		clog << "VSTAU: Missing value for key " <<
+ 				CFStringGetCStringPtr(kVSTAUPlugInPathKey, kCFStringEncodingMacRoman) <<
+@@ -171,10 +295,33 @@
+ 	// Open the effect:
+ 	ComponentResult result;
+ 	CFStringRef errorString;
+-	if ((result = VSTLoader::OpenEffect(effectPath, VSTAU::HostCallback, this, effect, bundle, errorString)) != noErr)
++	
++	//try to load the vst from ~/Library/Audio/Plug-Ins/VST/
++	CFMutableStringRef effectPath = CFStringCreateMutable(NULL, 0);
++	CFStringAppend(effectPath, CFSTR("~/Library/Audio/Plug-Ins/VST/"));
++	CFStringAppend(effectPath, effectName);
++	CFStringRef fullPath = CFURLCopyFileSystemPath(CFURLCopyAbsoluteURL(CreateURLByExpandingTildePath(effectPath, true)), kCFURLPOSIXPathStyle);
++
++	if ((result = VSTLoader::OpenEffect(fullPath, VSTAU::HostCallback, this, effect, bundle, errorString)) != noErr)
+ 	{
+-		clog << "VSTAU: " << CFStringGetCStringPtr(errorString, kCFStringEncodingMacRoman) << endl;
+-		COMPONENT_THROW(result);
++		clog << "VSTAU: " << CFStringGetCStringPtr(errorString, kCFStringEncodingMacRoman) << ", trying /Library/Audio/Plug-Ins/VST/ now" << endl;
++			
++		//try to load the vst from /Library/Audio/Plug-Ins/VST/
++		CFMutableStringRef effectPath2 = CFStringCreateMutable(NULL, 0);
++		CFStringAppend(effectPath2, CFSTR("/Library/Audio/Plug-Ins/VST/"));
++		CFStringAppend(effectPath2, effectName);	
++
++		if ((result = VSTLoader::OpenEffect(effectPath2, VSTAU::HostCallback, this, effect, bundle, errorString)) != noErr)
++		{
++			clog << "VSTAU: " << CFStringGetCStringPtr(errorString, kCFStringEncodingMacRoman) << ", using the .plist path directly" << endl;
++
++			//backward compatibility: the value from the .plist contains the full path to the vst
++			if ((result = VSTLoader::OpenEffect(effectName, VSTAU::HostCallback, this, effect, bundle, errorString)) != noErr)
++			{
++				clog << "VSTAU: " << CFStringGetCStringPtr(errorString, kCFStringEncodingMacRoman) << endl;
++				COMPONENT_THROW(result);
++			}
++		}
+ 	}
+ 
+ 	// Create a parameter element for each effect parameter:
+Index: VMPlugIn.mm
+===================================================================
+--- VMPlugIn.mm	(revision 97)
++++ VMPlugIn.mm	(working copy)
+@@ -384,9 +384,15 @@
+ 		NSLog(@"Could not load bundle info plist at %@", infoPath);
+ 		return NO;
+ 	}
++	
++	[info setObject:[self componentBundleIdentifier] forKey:(NSString *)kCFBundleIdentifierKey];
++	
++	//[info setValue:[self VSTPath] forKey:(NSString *)kVSTAUPlugInPathKey];
+ 
+-	[info setObject:[self componentBundleIdentifier] forKey:(NSString *)kCFBundleIdentifierKey];
+-	[info setValue:[self VSTPath] forKey:(NSString *)kVSTAUPlugInPathKey];
++	//use plugin name only intead of full path
++	NSString *VSTFileName = [[self VSTPath] lastPathComponent];
++	[info setValue:VSTFileName forKey:(NSString *)kVSTAUPlugInPathKey];
++	
+ 	return [info writeToFile:infoPath atomically:YES];
+ }
+ 
+Index: English.lproj/MainMenu.nib/info.nib
+===================================================================
+--- English.lproj/MainMenu.nib/info.nib	(revision 97)
++++ English.lproj/MainMenu.nib/info.nib	(working copy)
+@@ -1,11 +1,11 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
++<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+ <plist version="1.0">
+ <dict>
+ 	<key>IBDocumentLocation</key>
+ 	<string>161 104 716 318 0 0 1920 1178 </string>
+ 	<key>IBFramework Version</key>
+-	<string>463.0</string>
++	<string>489.0</string>
+ 	<key>IBLastKnownRelativeProjectPath</key>
+ 	<string>../../VSTAU.xcodeproj</string>
+ 	<key>IBOldestOS</key>
+@@ -15,7 +15,7 @@
+ 		<integer>21</integer>
+ 	</array>
+ 	<key>IBSystem Version</key>
+-	<string>9C7010</string>
++	<string>8R2232</string>
+ 	<key>targetFramework</key>
+ 	<string>IBCocoaFramework</string>
+ </dict>
+Index: English.lproj/MainMenu.nib/keyedobjects.nib
+===================================================================
+Cannot display: file marked as a binary type.
+svn:mime-type = application/octet-stream
+Index: English.lproj/MainMenu.nib/classes.nib
+===================================================================
+--- English.lproj/MainMenu.nib/classes.nib	(revision 97)
++++ English.lproj/MainMenu.nib/classes.nib	(working copy)
+@@ -1,50 +1,33 @@
+ {
+-    IBClasses =     (
+-                {
+-            CLASS = FirstResponder;
+-            LANGUAGE = ObjC;
+-            SUPERCLASS = NSObject;
+-        },
+-                {
+-            CLASS = NSObject;
+-            LANGUAGE = ObjC;
+-        },
+-                {
+-            ACTIONS =             {
+-                install = id;
+-                installAll = id;
+-                refresh = id;
+-                uninstall = id;
+-                uninstallAll = id;
+-            };
+-            CLASS = VMApplication;
+-            LANGUAGE = ObjC;
+-            OUTLETS =             {
+-                "_plugInsController" = VMPlugInsController;
+-                progressIndicator = NSProgressIndicator;
+-                progressPanel = NSPanel;
+-                statusLabel = NSTextField;
+-            };
+-            SUPERCLASS = NSApplication;
+-        },
+-                {
+-            CLASS = VMPlugInsController;
+-            LANGUAGE = ObjC;
+-            OUTLETS =             {
+-                "_delegate" = id;
+-            };
+-            SUPERCLASS = NSArrayController;
+-        },
+-                {
+-            CLASS = VMStatusFormatter;
+-            LANGUAGE = ObjC;
+-            SUPERCLASS = NSFormatter;
+-        },
+-                {
+-            CLASS = VMVersionFormatter;
+-            LANGUAGE = ObjC;
+-            SUPERCLASS = NSFormatter;
+-        }
+-    );
+-    IBVersion = 1;
++    IBClasses = (
++        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
++        {CLASS = NSObject; LANGUAGE = ObjC; }, 
++        {
++            ACTIONS = {
++                install = id; 
++                installAll = id; 
++                refresh = id; 
++                uninstall = id; 
++                uninstallAll = id; 
++            }; 
++            CLASS = VMApplication; 
++            LANGUAGE = ObjC; 
++            OUTLETS = {
++                "_plugInsController" = VMPlugInsController; 
++                progressIndicator = NSProgressIndicator; 
++                progressPanel = NSPanel; 
++                statusLabel = NSTextField; 
++            }; 
++            SUPERCLASS = NSApplication; 
++        }, 
++        {
++            CLASS = VMPlugInsController; 
++            LANGUAGE = ObjC; 
++            OUTLETS = {"_delegate" = id; }; 
++            SUPERCLASS = NSArrayController; 
++        }, 
++        {CLASS = VMStatusFormatter; LANGUAGE = ObjC; SUPERCLASS = NSFormatter; }, 
++        {CLASS = VMVersionFormatter; LANGUAGE = ObjC; SUPERCLASS = NSFormatter; }
++    ); 
++    IBVersion = 1; 
+ }
+\ No newline at end of file

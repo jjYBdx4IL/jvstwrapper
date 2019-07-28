@@ -1,0 +1,531 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84C66D190E4F9B69009C9989 /* bmp00128.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 84C66D170E4F9B68009C9989 /* bmp00128.bmp */; };
+		84C66D1A0E4F9B69009C9989 /* bmp00129.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 84C66D180E4F9B68009C9989 /* bmp00129.bmp */; };
+		C3B572360BD8815A00846E41 /* jLADSPAwRapperMAIN.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3B572340BD8815A00846E41 /* jLADSPAwRapperMAIN.cpp */; };
+		C3C3AEB40B6247C100C0F71B /* PkgInfo in Resources */ = {isa = PBXBuildFile; fileRef = C3C3AE9D0B6244AC00C0F71B /* PkgInfo */; };
+		C3C3AED90B62683000C0F71B /* jvstwrapper.icns in Resources */ = {isa = PBXBuildFile; fileRef = C3C3AED80B62683000C0F71B /* jvstwrapper.icns */; };
+		C3C70FE60B4582F900DA1076 /* libjvstwrapper.jnilib.ini in Resources */ = {isa = PBXBuildFile; fileRef = C3E310630B405D130015E591 /* libjvstwrapper.jnilib.ini */; };
+		C3C70FE70B45830A00DA1076 /* vstcontrols.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3EA1B870B3D97AF00B4C69F /* vstcontrols.cpp */; };
+		C3C70FE80B45830A00DA1076 /* vstgui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3EA1B890B3D97AF00B4C69F /* vstgui.cpp */; };
+		C3C70FE90B45830A00DA1076 /* VSTV20ToPlug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3EA1B980B3D97AF00B4C69F /* VSTV20ToPlug.cpp */; };
+		C3C70FEA0B45830A00DA1076 /* VSTV10ToPlug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3EA1B940B3D97AF00B4C69F /* VSTV10ToPlug.cpp */; };
+		C3C70FEB0B45830A00DA1076 /* VSTV20ToHost.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3EA1B960B3D97AF00B4C69F /* VSTV20ToHost.cpp */; };
+		C3C70FEC0B45830A00DA1076 /* VSTV21ToPlug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3EA1B9C0B3D97AF00B4C69F /* VSTV21ToPlug.cpp */; };
+		C3C70FED0B45830A00DA1076 /* VSTV24ToPlug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3EA1BA80B3D97AF00B4C69F /* VSTV24ToPlug.cpp */; };
+		C3C70FEE0B45830A00DA1076 /* jVSTwRapperMAIN.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3EA1B6D0B3D97AE00B4C69F /* jVSTwRapperMAIN.cpp */; };
+		C3C70FEF0B45830A00DA1076 /* VSTV23ToPlug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3EA1BA40B3D97AF00B4C69F /* VSTV23ToPlug.cpp */; };
+		C3C70FF10B45830A00DA1076 /* cscrollview.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3EA1B810B3D97AE00B4C69F /* cscrollview.cpp */; };
+		C3C70FF20B45830A00DA1076 /* VSTV22ToPlug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3EA1BA00B3D97AF00B4C69F /* VSTV22ToPlug.cpp */; };
+		C3C70FF30B45830A00DA1076 /* VSTV10ToHost.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3EA1B920B3D97AF00B4C69F /* VSTV10ToHost.cpp */; };
+		C3C70FF40B45830A00DA1076 /* audioeffectx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3EA1B790B3D97AE00B4C69F /* audioeffectx.cpp */; };
+		C3C70FF50B45830A00DA1076 /* ctabview.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3EA1B830B3D97AF00B4C69F /* ctabview.cpp */; };
+		C3C70FF60B45830A00DA1076 /* VSTV23ToHost.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3EA1BA20B3D97AF00B4C69F /* VSTV23ToHost.cpp */; };
+		C3C70FF70B45830A00DA1076 /* VSTV21ToHost.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3EA1B9A0B3D97AF00B4C69F /* VSTV21ToHost.cpp */; };
+		C3C70FF80B45830A00DA1076 /* VSTV24ToHost.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3EA1BA60B3D97AF00B4C69F /* VSTV24ToHost.cpp */; };
+		C3C70FF90B45830A00DA1076 /* JNIUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3EA1B6A0B3D97AE00B4C69F /* JNIUtils.cpp */; };
+		C3C70FFA0B45830A00DA1076 /* aeffguieditor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3EA1B7C0B3D97AE00B4C69F /* aeffguieditor.cpp */; };
+		C3C70FFB0B45830A00DA1076 /* cfileselector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3EA1B7E0B3D97AE00B4C69F /* cfileselector.cpp */; };
+		C3C70FFC0B45830A00DA1076 /* audioeffect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3EA1B770B3D97AE00B4C69F /* audioeffect.cpp */; };
+		C3C70FFD0B45830A00DA1076 /* ConfigFileReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3EA1B640B3D97AE00B4C69F /* ConfigFileReader.cpp */; };
+		C3C70FFE0B45830A00DA1076 /* VSTV22ToHost.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3EA1B9E0B3D97AF00B4C69F /* VSTV22ToHost.cpp */; };
+		C3C710200B45832E00DA1076 /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3E30F360B4037F80015E591 /* QuickTime.framework */; };
+		C3C710210B45833700DA1076 /* JavaVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B7D3FD0B3EF01800EE5C26 /* JavaVM.framework */; };
+		C3C710320B45834300DA1076 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B7D3F40B3EEFE700EE5C26 /* Carbon.framework */; };
+		C3C711300B45B4D800DA1076 /* VSTGUIWrapperMAC.mm in Sources */ = {isa = PBXBuildFile; fileRef = C3C7112F0B45B4D800DA1076 /* VSTGUIWrapperMAC.mm */; };
+		C3C7114D0B45B60100DA1076 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C7114C0B45B60100DA1076 /* Cocoa.framework */; };
+		C3F9CC4B0B52D54B0085453F /* VSTGUIWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3EA1B900B3D97AF00B4C69F /* VSTGUIWrapper.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		84C66D170E4F9B68009C9989 /* bmp00128.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = bmp00128.bmp; path = src/bmp00128.bmp; sourceTree = "<group>"; };
+		84C66D180E4F9B68009C9989 /* bmp00129.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = bmp00129.bmp; path = src/bmp00129.bmp; sourceTree = "<group>"; };
+		8D01CCD10486CAD60068D4B7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C3B572340BD8815A00846E41 /* jLADSPAwRapperMAIN.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = jLADSPAwRapperMAIN.cpp; sourceTree = "<group>"; };
+		C3B572350BD8815A00846E41 /* ladspa.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ladspa.h; sourceTree = "<group>"; };
+		C3B7D3F40B3EEFE700EE5C26 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		C3B7D3FD0B3EF01800EE5C26 /* JavaVM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaVM.framework; path = /System/Library/Frameworks/JavaVM.framework; sourceTree = "<absolute>"; };
+		C3C3AE9D0B6244AC00C0F71B /* PkgInfo */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = PkgInfo; sourceTree = "<group>"; };
+		C3C3AED80B62683000C0F71B /* jvstwrapper.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = jvstwrapper.icns; sourceTree = "<group>"; };
+		C3C70FE00B45823100DA1076 /* jvstwrapper.vst */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jvstwrapper.vst; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3C7112E0B45B4D800DA1076 /* VSTGUIWrapperMAC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VSTGUIWrapperMAC.h; path = src/VSTGUIWrapperMAC.h; sourceTree = "<group>"; };
+		C3C7112F0B45B4D800DA1076 /* VSTGUIWrapperMAC.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = VSTGUIWrapperMAC.mm; path = src/VSTGUIWrapperMAC.mm; sourceTree = "<group>"; };
+		C3C7114C0B45B60100DA1076 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		C3E30F360B4037F80015E591 /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
+		C3E310630B405D130015E591 /* libjvstwrapper.jnilib.ini */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = libjvstwrapper.jnilib.ini; sourceTree = "<group>"; };
+		C3EA1B640B3D97AE00B4C69F /* ConfigFileReader.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = ConfigFileReader.cpp; path = src/ConfigFileReader.cpp; sourceTree = "<group>"; };
+		C3EA1B650B3D97AE00B4C69F /* ConfigFileReader.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ConfigFileReader.h; path = src/ConfigFileReader.h; sourceTree = "<group>"; };
+		C3EA1B6A0B3D97AE00B4C69F /* JNIUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = JNIUtils.cpp; path = src/JNIUtils.cpp; sourceTree = "<group>"; };
+		C3EA1B6B0B3D97AE00B4C69F /* JNIUtils.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = JNIUtils.h; path = src/JNIUtils.h; sourceTree = "<group>"; };
+		C3EA1B6D0B3D97AE00B4C69F /* jVSTwRapperMAIN.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = jVSTwRapperMAIN.cpp; path = src/jVSTwRapperMAIN.cpp; sourceTree = "<group>"; };
+		C3EA1B6E0B3D97AE00B4C69F /* jVSTwRapperMAIN.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = jVSTwRapperMAIN.h; path = src/jVSTwRapperMAIN.h; sourceTree = "<group>"; };
+		C3EA1B710B3D97AE00B4C69F /* aeffect.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = aeffect.h; sourceTree = "<group>"; };
+		C3EA1B720B3D97AE00B4C69F /* aeffectx.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = aeffectx.h; sourceTree = "<group>"; };
+		C3EA1B730B3D97AE00B4C69F /* vstfxstore.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = vstfxstore.h; sourceTree = "<group>"; };
+		C3EA1B760B3D97AE00B4C69F /* aeffeditor.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = aeffeditor.h; sourceTree = "<group>"; };
+		C3EA1B770B3D97AE00B4C69F /* audioeffect.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = audioeffect.cpp; sourceTree = "<group>"; };
+		C3EA1B780B3D97AE00B4C69F /* audioeffect.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = audioeffect.h; sourceTree = "<group>"; };
+		C3EA1B790B3D97AE00B4C69F /* audioeffectx.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = audioeffectx.cpp; sourceTree = "<group>"; };
+		C3EA1B7A0B3D97AE00B4C69F /* audioeffectx.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = audioeffectx.h; sourceTree = "<group>"; };
+		C3EA1B7C0B3D97AE00B4C69F /* aeffguieditor.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = aeffguieditor.cpp; sourceTree = "<group>"; };
+		C3EA1B7D0B3D97AE00B4C69F /* aeffguieditor.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = aeffguieditor.h; sourceTree = "<group>"; };
+		C3EA1B7E0B3D97AE00B4C69F /* cfileselector.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = cfileselector.cpp; sourceTree = "<group>"; };
+		C3EA1B7F0B3D97AE00B4C69F /* cfileselector.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = cfileselector.h; sourceTree = "<group>"; };
+		C3EA1B800B3D97AE00B4C69F /* Changelog */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = Changelog; sourceTree = "<group>"; };
+		C3EA1B810B3D97AE00B4C69F /* cscrollview.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = cscrollview.cpp; sourceTree = "<group>"; };
+		C3EA1B820B3D97AE00B4C69F /* cscrollview.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = cscrollview.h; sourceTree = "<group>"; };
+		C3EA1B830B3D97AF00B4C69F /* ctabview.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = ctabview.cpp; sourceTree = "<group>"; };
+		C3EA1B840B3D97AF00B4C69F /* ctabview.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ctabview.h; sourceTree = "<group>"; };
+		C3EA1B870B3D97AF00B4C69F /* vstcontrols.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = vstcontrols.cpp; sourceTree = "<group>"; };
+		C3EA1B880B3D97AF00B4C69F /* vstcontrols.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = vstcontrols.h; sourceTree = "<group>"; };
+		C3EA1B890B3D97AF00B4C69F /* vstgui.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = vstgui.cpp; sourceTree = "<group>"; };
+		C3EA1B8A0B3D97AF00B4C69F /* vstgui.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = vstgui.h; sourceTree = "<group>"; };
+		C3EA1B8B0B3D97AF00B4C69F /* vstkeycode.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = vstkeycode.h; sourceTree = "<group>"; };
+		C3EA1B8C0B3D97AF00B4C69F /* vstplugscarbon.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = vstplugscarbon.h; sourceTree = "<group>"; };
+		C3EA1B8D0B3D97AF00B4C69F /* vstplugsmac.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = vstplugsmac.h; sourceTree = "<group>"; };
+		C3EA1B8E0B3D97AF00B4C69F /* vstplugsmacho.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = vstplugsmacho.h; sourceTree = "<group>"; };
+		C3EA1B8F0B3D97AF00B4C69F /* vstplugsquartz.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = vstplugsquartz.h; sourceTree = "<group>"; };
+		C3EA1B900B3D97AF00B4C69F /* VSTGUIWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = VSTGUIWrapper.cpp; path = src/VSTGUIWrapper.cpp; sourceTree = "<group>"; };
+		C3EA1B910B3D97AF00B4C69F /* VSTGUIWrapper.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VSTGUIWrapper.h; path = src/VSTGUIWrapper.h; sourceTree = "<group>"; };
+		C3EA1B920B3D97AF00B4C69F /* VSTV10ToHost.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = VSTV10ToHost.cpp; path = src/VSTV10ToHost.cpp; sourceTree = "<group>"; };
+		C3EA1B930B3D97AF00B4C69F /* VSTV10ToHost.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VSTV10ToHost.h; path = src/VSTV10ToHost.h; sourceTree = "<group>"; };
+		C3EA1B940B3D97AF00B4C69F /* VSTV10ToPlug.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = VSTV10ToPlug.cpp; path = src/VSTV10ToPlug.cpp; sourceTree = "<group>"; };
+		C3EA1B950B3D97AF00B4C69F /* VSTV10ToPlug.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VSTV10ToPlug.h; path = src/VSTV10ToPlug.h; sourceTree = "<group>"; };
+		C3EA1B960B3D97AF00B4C69F /* VSTV20ToHost.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = VSTV20ToHost.cpp; path = src/VSTV20ToHost.cpp; sourceTree = "<group>"; };
+		C3EA1B970B3D97AF00B4C69F /* VSTV20ToHost.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VSTV20ToHost.h; path = src/VSTV20ToHost.h; sourceTree = "<group>"; };
+		C3EA1B980B3D97AF00B4C69F /* VSTV20ToPlug.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = VSTV20ToPlug.cpp; path = src/VSTV20ToPlug.cpp; sourceTree = "<group>"; };
+		C3EA1B990B3D97AF00B4C69F /* VSTV20ToPlug.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VSTV20ToPlug.h; path = src/VSTV20ToPlug.h; sourceTree = "<group>"; };
+		C3EA1B9A0B3D97AF00B4C69F /* VSTV21ToHost.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = VSTV21ToHost.cpp; path = src/VSTV21ToHost.cpp; sourceTree = "<group>"; };
+		C3EA1B9B0B3D97AF00B4C69F /* VSTV21ToHost.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VSTV21ToHost.h; path = src/VSTV21ToHost.h; sourceTree = "<group>"; };
+		C3EA1B9C0B3D97AF00B4C69F /* VSTV21ToPlug.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = VSTV21ToPlug.cpp; path = src/VSTV21ToPlug.cpp; sourceTree = "<group>"; };
+		C3EA1B9D0B3D97AF00B4C69F /* VSTV21ToPlug.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VSTV21ToPlug.h; path = src/VSTV21ToPlug.h; sourceTree = "<group>"; };
+		C3EA1B9E0B3D97AF00B4C69F /* VSTV22ToHost.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = VSTV22ToHost.cpp; path = src/VSTV22ToHost.cpp; sourceTree = "<group>"; };
+		C3EA1B9F0B3D97AF00B4C69F /* VSTV22ToHost.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VSTV22ToHost.h; path = src/VSTV22ToHost.h; sourceTree = "<group>"; };
+		C3EA1BA00B3D97AF00B4C69F /* VSTV22ToPlug.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = VSTV22ToPlug.cpp; path = src/VSTV22ToPlug.cpp; sourceTree = "<group>"; };
+		C3EA1BA10B3D97AF00B4C69F /* VSTV22ToPlug.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VSTV22ToPlug.h; path = src/VSTV22ToPlug.h; sourceTree = "<group>"; };
+		C3EA1BA20B3D97AF00B4C69F /* VSTV23ToHost.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = VSTV23ToHost.cpp; path = src/VSTV23ToHost.cpp; sourceTree = "<group>"; };
+		C3EA1BA30B3D97AF00B4C69F /* VSTV23ToHost.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VSTV23ToHost.h; path = src/VSTV23ToHost.h; sourceTree = "<group>"; };
+		C3EA1BA40B3D97AF00B4C69F /* VSTV23ToPlug.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = VSTV23ToPlug.cpp; path = src/VSTV23ToPlug.cpp; sourceTree = "<group>"; };
+		C3EA1BA50B3D97AF00B4C69F /* VSTV23ToPlug.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VSTV23ToPlug.h; path = src/VSTV23ToPlug.h; sourceTree = "<group>"; };
+		C3EA1BA60B3D97AF00B4C69F /* VSTV24ToHost.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = VSTV24ToHost.cpp; path = src/VSTV24ToHost.cpp; sourceTree = "<group>"; };
+		C3EA1BA70B3D97AF00B4C69F /* VSTV24ToHost.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VSTV24ToHost.h; path = src/VSTV24ToHost.h; sourceTree = "<group>"; };
+		C3EA1BA80B3D97AF00B4C69F /* VSTV24ToPlug.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = VSTV24ToPlug.cpp; path = src/VSTV24ToPlug.cpp; sourceTree = "<group>"; };
+		C3EA1BA90B3D97AF00B4C69F /* VSTV24ToPlug.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = VSTV24ToPlug.h; path = src/VSTV24ToPlug.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C3C70FDE0B45823100DA1076 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3C710320B45834300DA1076 /* Carbon.framework in Frameworks */,
+				C3C710210B45833700DA1076 /* JavaVM.framework in Frameworks */,
+				C3C710200B45832E00DA1076 /* QuickTime.framework in Frameworks */,
+				C3C7114D0B45B60100DA1076 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* jvstwrapper */ = {
+			isa = PBXGroup;
+			children = (
+				C3B572330BD8815A00846E41 /* ladspa */,
+				C3B7D5750B3F526900EE5C26 /* wrapper */,
+				C3EA1B620B3D97AE00B4C69F /* conf */,
+				C3EA1B6F0B3D97AE00B4C69F /* pluginterfaces */,
+				C3EA1B740B3D97AE00B4C69F /* public.sdk */,
+				C3EA1B7B0B3D97AE00B4C69F /* vstgui */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				089C1671FE841209C02AAC07 /* External Frameworks and Libraries */,
+				19C28FB4FE9D528D11CA2CBB /* Products */,
+			);
+			name = jvstwrapper;
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				C3C7114C0B45B60100DA1076 /* Cocoa.framework */,
+				C3E30F360B4037F80015E591 /* QuickTime.framework */,
+				C3B7D3FD0B3EF01800EE5C26 /* JavaVM.framework */,
+				C3B7D3F40B3EEFE700EE5C26 /* Carbon.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				84C66D170E4F9B68009C9989 /* bmp00128.bmp */,
+				84C66D180E4F9B68009C9989 /* bmp00129.bmp */,
+				C3C3AED80B62683000C0F71B /* jvstwrapper.icns */,
+				C3C3AE9D0B6244AC00C0F71B /* PkgInfo */,
+				8D01CCD10486CAD60068D4B7 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		19C28FB4FE9D528D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C3C70FE00B45823100DA1076 /* jvstwrapper.vst */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C3B572330BD8815A00846E41 /* ladspa */ = {
+			isa = PBXGroup;
+			children = (
+				C3B572340BD8815A00846E41 /* jLADSPAwRapperMAIN.cpp */,
+				C3B572350BD8815A00846E41 /* ladspa.h */,
+			);
+			name = ladspa;
+			path = src/ladspa;
+			sourceTree = "<group>";
+		};
+		C3B7D5750B3F526900EE5C26 /* wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				C3C7112E0B45B4D800DA1076 /* VSTGUIWrapperMAC.h */,
+				C3C7112F0B45B4D800DA1076 /* VSTGUIWrapperMAC.mm */,
+				C3EA1B900B3D97AF00B4C69F /* VSTGUIWrapper.cpp */,
+				C3EA1B910B3D97AF00B4C69F /* VSTGUIWrapper.h */,
+				C3EA1B920B3D97AF00B4C69F /* VSTV10ToHost.cpp */,
+				C3EA1B930B3D97AF00B4C69F /* VSTV10ToHost.h */,
+				C3EA1B940B3D97AF00B4C69F /* VSTV10ToPlug.cpp */,
+				C3EA1B950B3D97AF00B4C69F /* VSTV10ToPlug.h */,
+				C3EA1B960B3D97AF00B4C69F /* VSTV20ToHost.cpp */,
+				C3EA1B970B3D97AF00B4C69F /* VSTV20ToHost.h */,
+				C3EA1B980B3D97AF00B4C69F /* VSTV20ToPlug.cpp */,
+				C3EA1B990B3D97AF00B4C69F /* VSTV20ToPlug.h */,
+				C3EA1B9A0B3D97AF00B4C69F /* VSTV21ToHost.cpp */,
+				C3EA1B9B0B3D97AF00B4C69F /* VSTV21ToHost.h */,
+				C3EA1B9C0B3D97AF00B4C69F /* VSTV21ToPlug.cpp */,
+				C3EA1B9D0B3D97AF00B4C69F /* VSTV21ToPlug.h */,
+				C3EA1B9E0B3D97AF00B4C69F /* VSTV22ToHost.cpp */,
+				C3EA1B9F0B3D97AF00B4C69F /* VSTV22ToHost.h */,
+				C3EA1BA00B3D97AF00B4C69F /* VSTV22ToPlug.cpp */,
+				C3EA1BA10B3D97AF00B4C69F /* VSTV22ToPlug.h */,
+				C3EA1BA20B3D97AF00B4C69F /* VSTV23ToHost.cpp */,
+				C3EA1BA30B3D97AF00B4C69F /* VSTV23ToHost.h */,
+				C3EA1BA40B3D97AF00B4C69F /* VSTV23ToPlug.cpp */,
+				C3EA1BA50B3D97AF00B4C69F /* VSTV23ToPlug.h */,
+				C3EA1BA60B3D97AF00B4C69F /* VSTV24ToHost.cpp */,
+				C3EA1BA70B3D97AF00B4C69F /* VSTV24ToHost.h */,
+				C3EA1BA80B3D97AF00B4C69F /* VSTV24ToPlug.cpp */,
+				C3EA1BA90B3D97AF00B4C69F /* VSTV24ToPlug.h */,
+				C3EA1B640B3D97AE00B4C69F /* ConfigFileReader.cpp */,
+				C3EA1B650B3D97AE00B4C69F /* ConfigFileReader.h */,
+				C3EA1B6A0B3D97AE00B4C69F /* JNIUtils.cpp */,
+				C3EA1B6B0B3D97AE00B4C69F /* JNIUtils.h */,
+				C3EA1B6D0B3D97AE00B4C69F /* jVSTwRapperMAIN.cpp */,
+				C3EA1B6E0B3D97AE00B4C69F /* jVSTwRapperMAIN.h */,
+			);
+			name = wrapper;
+			sourceTree = "<group>";
+		};
+		C3EA1B620B3D97AE00B4C69F /* conf */ = {
+			isa = PBXGroup;
+			children = (
+				C3E310630B405D130015E591 /* libjvstwrapper.jnilib.ini */,
+			);
+			name = conf;
+			path = src/conf;
+			sourceTree = "<group>";
+		};
+		C3EA1B6F0B3D97AE00B4C69F /* pluginterfaces */ = {
+			isa = PBXGroup;
+			children = (
+				C3EA1B700B3D97AE00B4C69F /* vst2.x */,
+			);
+			name = pluginterfaces;
+			path = src/pluginterfaces;
+			sourceTree = "<group>";
+		};
+		C3EA1B700B3D97AE00B4C69F /* vst2.x */ = {
+			isa = PBXGroup;
+			children = (
+				C3EA1B710B3D97AE00B4C69F /* aeffect.h */,
+				C3EA1B720B3D97AE00B4C69F /* aeffectx.h */,
+				C3EA1B730B3D97AE00B4C69F /* vstfxstore.h */,
+			);
+			path = vst2.x;
+			sourceTree = "<group>";
+		};
+		C3EA1B740B3D97AE00B4C69F /* public.sdk */ = {
+			isa = PBXGroup;
+			children = (
+				C3EA1B750B3D97AE00B4C69F /* vst2.x */,
+			);
+			name = public.sdk;
+			path = src/public.sdk;
+			sourceTree = "<group>";
+		};
+		C3EA1B750B3D97AE00B4C69F /* vst2.x */ = {
+			isa = PBXGroup;
+			children = (
+				C3EA1B760B3D97AE00B4C69F /* aeffeditor.h */,
+				C3EA1B770B3D97AE00B4C69F /* audioeffect.cpp */,
+				C3EA1B780B3D97AE00B4C69F /* audioeffect.h */,
+				C3EA1B790B3D97AE00B4C69F /* audioeffectx.cpp */,
+				C3EA1B7A0B3D97AE00B4C69F /* audioeffectx.h */,
+			);
+			path = vst2.x;
+			sourceTree = "<group>";
+		};
+		C3EA1B7B0B3D97AE00B4C69F /* vstgui */ = {
+			isa = PBXGroup;
+			children = (
+				C3EA1B7C0B3D97AE00B4C69F /* aeffguieditor.cpp */,
+				C3EA1B7D0B3D97AE00B4C69F /* aeffguieditor.h */,
+				C3EA1B7E0B3D97AE00B4C69F /* cfileselector.cpp */,
+				C3EA1B7F0B3D97AE00B4C69F /* cfileselector.h */,
+				C3EA1B800B3D97AE00B4C69F /* Changelog */,
+				C3EA1B810B3D97AE00B4C69F /* cscrollview.cpp */,
+				C3EA1B820B3D97AE00B4C69F /* cscrollview.h */,
+				C3EA1B830B3D97AF00B4C69F /* ctabview.cpp */,
+				C3EA1B840B3D97AF00B4C69F /* ctabview.h */,
+				C3EA1B870B3D97AF00B4C69F /* vstcontrols.cpp */,
+				C3EA1B880B3D97AF00B4C69F /* vstcontrols.h */,
+				C3EA1B890B3D97AF00B4C69F /* vstgui.cpp */,
+				C3EA1B8A0B3D97AF00B4C69F /* vstgui.h */,
+				C3EA1B8B0B3D97AF00B4C69F /* vstkeycode.h */,
+				C3EA1B8C0B3D97AF00B4C69F /* vstplugscarbon.h */,
+				C3EA1B8D0B3D97AF00B4C69F /* vstplugsmac.h */,
+				C3EA1B8E0B3D97AF00B4C69F /* vstplugsmacho.h */,
+				C3EA1B8F0B3D97AF00B4C69F /* vstplugsquartz.h */,
+			);
+			name = vstgui;
+			path = src/vstgui;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C3C70FDF0B45823100DA1076 /* jvstwrapper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3C70FE20B45823200DA1076 /* Build configuration list for PBXNativeTarget "jvstwrapper" */;
+			buildPhases = (
+				C3C70FDC0B45823100DA1076 /* Resources */,
+				C3C70FDD0B45823100DA1076 /* Sources */,
+				C3C70FDE0B45823100DA1076 /* Frameworks */,
+				C3C710750B458D8900DA1076 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = jvstwrapper;
+			productName = jvst;
+			productReference = C3C70FE00B45823100DA1076 /* jvstwrapper.vst */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 4FADC23708B4156C00ABE55E /* Build configuration list for PBXProject "jvstwrapper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 089C166AFE841209C02AAC07 /* jvstwrapper */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C3C70FDF0B45823100DA1076 /* jvstwrapper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C3C70FDC0B45823100DA1076 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3C70FE60B4582F900DA1076 /* libjvstwrapper.jnilib.ini in Resources */,
+				C3C3AEB40B6247C100C0F71B /* PkgInfo in Resources */,
+				C3C3AED90B62683000C0F71B /* jvstwrapper.icns in Resources */,
+				84C66D190E4F9B69009C9989 /* bmp00128.bmp in Resources */,
+				84C66D1A0E4F9B69009C9989 /* bmp00129.bmp in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C3C710750B458D8900DA1076 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mv $BUILT_PRODUCTS_DIR/jvstwrapper.vst/Contents/MacOS/libjvstwrapper  $BUILT_PRODUCTS_DIR/jvstwrapper.vst/Contents/MacOS/libjvstwrapper.jnilib\n\nmv $BUILT_PRODUCTS_DIR/jvstwrapper.vst/Contents/Resources/PkgInfo  $BUILT_PRODUCTS_DIR/jvstwrapper.vst/Contents/PkgInfo\n\n/Developer/Tools/SetFile -a B $BUILT_PRODUCTS_DIR/jvstwrapper.vst\n\nsips -i $BUILT_PRODUCTS_DIR/jvstwrapper.vst/Contents/Resources/jvstwrapper.icns\nditto $BUILT_PRODUCTS_DIR/jvstwrapper.vst/Contents/Resources/jvstwrapper.icns $BUILT_PRODUCTS_DIR/jvstwrapper.vst/Icon\n/Developer/Tools/SetFile -a V $BUILT_PRODUCTS_DIR/jvstwrapper.vst/Icon\necho \"file rename $BUILT_PRODUCTS_DIR/jvstwrapper.vst/Icon $BUILT_PRODUCTS_DIR/jvstwrapper.vst/Icon\\r\" | tclsh\n/Developer/Tools/SetFile -a C $BUILT_PRODUCTS_DIR/jvstwrapper.vst/";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C3C70FDD0B45823100DA1076 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3C70FE70B45830A00DA1076 /* vstcontrols.cpp in Sources */,
+				C3C70FE80B45830A00DA1076 /* vstgui.cpp in Sources */,
+				C3C70FE90B45830A00DA1076 /* VSTV20ToPlug.cpp in Sources */,
+				C3C70FEA0B45830A00DA1076 /* VSTV10ToPlug.cpp in Sources */,
+				C3C70FEB0B45830A00DA1076 /* VSTV20ToHost.cpp in Sources */,
+				C3C70FEC0B45830A00DA1076 /* VSTV21ToPlug.cpp in Sources */,
+				C3C70FED0B45830A00DA1076 /* VSTV24ToPlug.cpp in Sources */,
+				C3C70FEE0B45830A00DA1076 /* jVSTwRapperMAIN.cpp in Sources */,
+				C3C70FEF0B45830A00DA1076 /* VSTV23ToPlug.cpp in Sources */,
+				C3C70FF10B45830A00DA1076 /* cscrollview.cpp in Sources */,
+				C3C70FF20B45830A00DA1076 /* VSTV22ToPlug.cpp in Sources */,
+				C3C70FF30B45830A00DA1076 /* VSTV10ToHost.cpp in Sources */,
+				C3C70FF40B45830A00DA1076 /* audioeffectx.cpp in Sources */,
+				C3C70FF50B45830A00DA1076 /* ctabview.cpp in Sources */,
+				C3C70FF60B45830A00DA1076 /* VSTV23ToHost.cpp in Sources */,
+				C3C70FF70B45830A00DA1076 /* VSTV21ToHost.cpp in Sources */,
+				C3C70FF80B45830A00DA1076 /* VSTV24ToHost.cpp in Sources */,
+				C3C70FF90B45830A00DA1076 /* JNIUtils.cpp in Sources */,
+				C3C70FFA0B45830A00DA1076 /* aeffguieditor.cpp in Sources */,
+				C3C70FFB0B45830A00DA1076 /* cfileselector.cpp in Sources */,
+				C3C70FFC0B45830A00DA1076 /* audioeffect.cpp in Sources */,
+				C3C70FFD0B45830A00DA1076 /* ConfigFileReader.cpp in Sources */,
+				C3C70FFE0B45830A00DA1076 /* VSTV22ToHost.cpp in Sources */,
+				C3C711300B45B4D800DA1076 /* VSTGUIWrapperMAC.mm in Sources */,
+				C3F9CC4B0B52D54B0085453F /* VSTGUIWrapper.cpp in Sources */,
+				C3B572360BD8815A00846E41 /* jLADSPAwRapperMAIN.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		4FADC23808B4156C00ABE55E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = i386;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Debug;
+		};
+		4FADC23908B4156C00ABE55E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Release;
+		};
+		C3C70FE30B45823200DA1076 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_EXTENSION = jnilib;
+				EXECUTABLE_PREFIX = lib;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
+				GCC_VERSION = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Audio/Plug-Ins/VST/";
+				MACOSX_DEPLOYMENT_TARGET = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Carbon,
+				);
+				PRODUCT_NAME = jvstwrapper;
+				SDKROOT = macosx10.6;
+				USER_HEADER_SEARCH_PATHS = "$(inherited) /System/Library/Frameworks/JavaVM.framework/Headers";
+				WRAPPER_EXTENSION = vst;
+			};
+			name = Debug;
+		};
+		C3C70FE40B45823200DA1076 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				EXECUTABLE_EXTENSION = jnilib;
+				EXECUTABLE_PREFIX = lib;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_VERSION = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Audio/Plug-Ins/VST/";
+				MACOSX_DEPLOYMENT_TARGET = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Carbon,
+				);
+				PRODUCT_NAME = jvstwrapper;
+				SDKROOT = macosx10.6;
+				SEPARATE_STRIP = YES;
+				STRIP_INSTALLED_PRODUCT = YES;
+				USER_HEADER_SEARCH_PATHS = "$(inherited) /System/Library/Frameworks/JavaVM.framework/Headers";
+				WRAPPER_EXTENSION = vst;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4FADC23708B4156C00ABE55E /* Build configuration list for PBXProject "jvstwrapper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FADC23808B4156C00ABE55E /* Debug */,
+				4FADC23908B4156C00ABE55E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3C70FE20B45823200DA1076 /* Build configuration list for PBXNativeTarget "jvstwrapper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3C70FE30B45823200DA1076 /* Debug */,
+				C3C70FE40B45823200DA1076 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}

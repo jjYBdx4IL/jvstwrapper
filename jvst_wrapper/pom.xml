@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>net.sourceforge.jvstwrapper</groupId>
+	<artifactId>jVSTwRapper</artifactId>
+	<name>jVSTwRapper</name>
+	<version>1.0beta</version>
+	<url>http://jvstwrapper.sourceforge.net/</url>
+	<packaging>jar</packaging>
+
+	<!--
+	<parent>
+		<groupId>net.sourceforge.jvstwrapper</groupId>
+		<artifactId>jVSTwRapper-Release</artifactId>
+		<version>0.9g</version>
+		<relativePath>../jvst_wrapper/dist</relativePath>
+	</parent>
+	-->
+	
+	<licenses>
+		<license>
+		<name>GNU Lesser General Public License</name>
+		<url>http://www.gnu.org/licenses/lgpl.txt</url>
+		</license>
+	</licenses>
+
+	<scm>
+    	<connection>scm:cvs:pserver:anonymous:@jvstwrapper.cvs.sourceforge.net:/cvsroot/jvstwrapper:jvst_wrapper</connection>
+    	<url>http://jvstwrapper.cvs.sourceforge.net/jvstwrapper/jvst_wrapper/</url>
+  	</scm>
+    
+	<distributionManagement>
+		<repository>
+			<id>jvstwrapper-repo</id>
+			<url>scp://shell.sourceforge.net/home/groups/j/jv/jvstwrapper/htdocs/maven2/</url>
+		</repository>
+	</distributionManagement>
+  
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+	
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.4</source>
+					<target>1.4</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	
+	<dependencies>
+		<dependency>
+			<groupId>net.sourceforge.jvstwrapper</groupId>
+			<artifactId>jVSTsYstem</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
+
+</project>

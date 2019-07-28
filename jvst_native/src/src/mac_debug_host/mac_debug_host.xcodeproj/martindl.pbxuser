@@ -1,0 +1,467 @@
+// !$*UTF8*$!
+{
+	C35FD03B0BD03D5D00408EBE /* minihost.cpp:152 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3C70ECF0B457A2500DA1076 /* minihost.cpp */;
+		functionName = "main()";
+		hitCount = 1;
+		lineNumber = 152;
+		modificationTime = 198700057.590293;
+		state = 1;
+	};
+	C35FD03F0BD03D6E00408EBE /* minihost.cpp:137 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3C70ECF0B457A2500DA1076 /* minihost.cpp */;
+		functionName = "main()";
+		hitCount = 1;
+		lineNumber = 137;
+		modificationTime = 198700057.610811;
+		state = 1;
+	};
+	C3893EEC0B5161AF00925067 /* Luna */ = {
+		isa = PBXExecutable;
+		activeArgIndex = 2147483647;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		configStateDict = {
+			"PBXLSLaunchAction-0" = {
+				PBXLSLaunchAction = 0;
+				PBXLSLaunchStartAction = 1;
+				PBXLSLaunchStdioStyle = 2;
+				PBXLSLaunchStyle = 0;
+				class = PBXLSRunLaunchConfig;
+				displayName = "Executable Runner";
+				identifier = com.apple.Xcode.launch.runConfig;
+				remoteHostInfo = "";
+				startActionInfo = "";
+			};
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		launchableReference = C3893EED0B5161AF00925067 /* LUNA.app */;
+		libgmallocEnabled = 0;
+		name = Luna;
+		sourceDirectories = (
+			/Users/martindl/workspace/jvst_native/src/src/mac_debug_host,
+			/Users/martindl/workspace/jvst_native/src/src,
+			/Users/martindl/workspace/jvst_native/src/src/pluginterfaces/vst2.x,
+			/Users/martindl/workspace/jvst_native/src/src/public.sdk/vst2.x,
+			/Users/martindl/workspace/jvst_native/src/src/vstgui,
+		);
+		startupPath = /Users/martindl/Desktop;
+	};
+	C3893EED0B5161AF00925067 /* LUNA.app */ = {
+		isa = PBXFileReference;
+		explicitFileType = wrapper.application;
+		name = LUNA.app;
+		path = "/Applications/LUNA Free/LUNA.app";
+		sourceTree = "<absolute>";
+	};
+	C38F7FC10B4F031F004C8249 /* Amadeus II */ = {
+		isa = PBXExecutable;
+		activeArgIndex = 2147483647;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		configStateDict = {
+			"PBXLSLaunchAction-0" = {
+				PBXLSLaunchAction = 0;
+				PBXLSLaunchStartAction = 1;
+				PBXLSLaunchStdioStyle = 2;
+				PBXLSLaunchStyle = 0;
+				class = PBXLSRunLaunchConfig;
+				displayName = "Executable Runner";
+				identifier = com.apple.Xcode.launch.runConfig;
+				remoteHostInfo = "";
+				startActionInfo = "";
+			};
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		launchableReference = C3B570730BD7EAB400846E41 /* Amadeus II.app */;
+		libgmallocEnabled = 0;
+		name = "Amadeus II";
+		sourceDirectories = (
+			/Users/martindl/workspace/jvst_native/src/src/mac_debug_host,
+			/Users/martindl/workspace/jvst_native/src/src,
+			/Users/martindl/workspace/jvst_native/src/src/pluginterfaces/vst2.x,
+			/Users/martindl/workspace/jvst_native/src/src/public.sdk/vst2.x,
+			/Users/martindl/workspace/jvst_native/src/src/vstgui,
+		);
+		startupPath = /Volumes/home/Users/martindl/Desktop;
+	};
+	C3B570730BD7EAB400846E41 /* Amadeus II.app */ = {
+		isa = PBXFileReference;
+		name = "Amadeus II.app";
+		path = "/Volumes/home/Applications/Amadeus II.app";
+		sourceTree = "<absolute>";
+	};
+	C3B570750BD7EAD300846E41 /* Amadeus Pro */ = {
+		isa = PBXExecutable;
+		activeArgIndex = 2147483647;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		launchableReference = C3B570760BD7EAD300846E41 /* Amadeus Pro.app */;
+		libgmallocEnabled = 0;
+		name = "Amadeus Pro";
+		savedGlobals = {
+		};
+		sourceDirectories = (
+			/Volumes/home/Users/martindl/workspace/jvst_native/src,
+			/Volumes/home/Users/martindl/workspace/jvst_native/src/src,
+			/Volumes/home/Users/martindl/workspace/jvst_native/src/src/pluginterfaces,
+			/Volumes/home/Users/martindl/workspace/jvst_native/src/src/public.sdk,
+			/Volumes/home/Users/martindl/workspace/jvst_native/src/src/vstgui,
+		);
+	};
+	C3B570760BD7EAD300846E41 /* Amadeus Pro.app */ = {
+		isa = PBXFileReference;
+		explicitFileType = wrapper.application;
+		name = "Amadeus Pro.app";
+		path = "/Volumes/home/Users/martindl/bin/Amadeus Pro.app";
+		sourceTree = "<absolute>";
+	};
+	C3C70EBF0B4579A800DA1076 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = C3D571A90B4DBBFD00637740 /* MissWatson */;
+		activeTarget = C3C70EE00B457B2000DA1076 /* minihost */;
+		addToTargets = (
+			C3C70EE00B457B2000DA1076 /* minihost */,
+		);
+		breakpoints = (
+			C35FD03B0BD03D5D00408EBE /* minihost.cpp:152 */,
+			C35FD03F0BD03D6E00408EBE /* minihost.cpp:137 */,
+		);
+		breakpointsGroup = C3C70FBB0B457E3000DA1076 /* XCBreakpointsBucket */;
+		codeSenseManager = C3C70EC40B4579A800DA1076 /* Code sense */;
+		executables = (
+			C3C70EE30B457B2000DA1076 /* minihost */,
+			C3D571A90B4DBBFD00637740 /* MissWatson */,
+			C38F7FC10B4F031F004C8249 /* Amadeus II */,
+			C3893EEC0B5161AF00925067 /* Luna */,
+			C3B570750BD7EAD300846E41 /* Amadeus Pro */,
+		);
+		ignoreBreakpointsInProjectsDict = {
+		};
+		perUserDictionary = {
+			"PBXConfiguration.PBXBreakpointsDataSource.v1:1CA1AED706398EBD00589147" = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXBreakpointsDataSource_BreakpointID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					20,
+					173,
+					20,
+					73,
+					72,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXBreakpointsDataSource_ActionID,
+					PBXBreakpointsDataSource_TypeID,
+					PBXBreakpointsDataSource_BreakpointID,
+					PBXBreakpointsDataSource_UseID,
+					PBXBreakpointsDataSource_LocationID,
+					PBXBreakpointsDataSource_ConditionID,
+					PBXBreakpointsDataSource_ContinueID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXErrorsWarningsDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXErrorsWarningsDataSource_LocationID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					300,
+					133,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXErrorsWarningsDataSource_TypeID,
+					PBXErrorsWarningsDataSource_MessageID,
+					PBXErrorsWarningsDataSource_LocationID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXExecutablesDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXExecutablesDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					22,
+					300,
+					130.5835,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXExecutablesDataSource_ActiveFlagID,
+					PBXExecutablesDataSource_NameID,
+					PBXExecutablesDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					204,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXSymbolsDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXSymbolsDataSource_SymbolNameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					16,
+					200,
+					50,
+					183,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXSymbolsDataSource_SymbolTypeIconID,
+					PBXSymbolsDataSource_SymbolNameID,
+					PBXSymbolsDataSource_SymbolTypeID,
+					PBXSymbolsDataSource_ReferenceNameID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					200,
+					63,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 198699625;
+			PBXWorkspaceStateSaveDate = 198699625;
+		};
+		sourceControlManager = C3C70EC30B4579A800DA1076 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	C3C70EC30B4579A800DA1076 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+		scmType = "";
+	};
+	C3C70EC40B4579A800DA1076 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	C3C70ECE0B457A2500DA1076 /* minieditor.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1178, 2856}}";
+			sepNavSelRange = "{508, 0}";
+			sepNavVisRect = "{{0, 0}, {453, 186}}";
+			sepNavWindowFrame = "{{15, -1}, {606, 742}}";
+		};
+	};
+	C3C70ECF0B457A2500DA1076 /* minihost.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {908, 4676}}";
+			sepNavSelRange = "{4983, 39}";
+			sepNavVisRect = "{{0, 4063}, {567, 613}}";
+			sepNavWindowFrame = "{{15, -1}, {606, 742}}";
+		};
+	};
+	C3C70ED40B457A9E00DA1076 /* aeffect.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1136, 4928}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {561, 613}}";
+			sepNavWindowFrame = "{{15, -1}, {606, 742}}";
+		};
+	};
+	C3C70ED50B457A9E00DA1076 /* aeffectx.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2228, 16016}}";
+			sepNavSelRange = "{627, 7}";
+			sepNavVisRect = "{{0, 15403}, {561, 613}}";
+			sepNavWindowFrame = "{{15, -1}, {606, 742}}";
+		};
+	};
+	C3C70EE00B457B2000DA1076 /* minihost */ = {
+		activeExec = 0;
+		executables = (
+			C3C70EE30B457B2000DA1076 /* minihost */,
+		);
+	};
+	C3C70EE30B457B2000DA1076 /* minihost */ = {
+		isa = PBXExecutable;
+		activeArgIndex = 0;
+		activeArgIndices = (
+			YES,
+		);
+		argumentStrings = (
+			/Volumes/home/Users/martindl/workspace/jvst_native/src/build/Debug/jvstwrapper.vst/,
+		);
+		autoAttachOnCrash = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = minihost;
+		savedGlobals = {
+		};
+		sourceDirectories = (
+			/Volumes/home/Users/martindl/workspace/jvst_native/src/src/mac_debug_host,
+			/Volumes/home/Users/martindl/workspace/jvst_native/src/src,
+			/Volumes/home/Users/martindl/workspace/jvst_native/src/src/pluginterfaces/vst2.x,
+			/Volumes/home/Users/martindl/workspace/jvst_native/src/src/public.sdk/vst2.x,
+			/Volumes/home/Users/martindl/workspace/jvst_native/src/src/vstgui,
+		);
+		variableFormatDictionary = {
+		};
+	};
+	C3C70EE40B457B2000DA1076 /* minihost-Info.plist */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {686, 613}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {561, 613}}";
+			sepNavWindowFrame = "{{15, -1}, {606, 742}}";
+		};
+	};
+	C3C70FBB0B457E3000DA1076 /* XCBreakpointsBucket */ = {
+		isa = XCBreakpointsBucket;
+		name = mac_debug_host;
+		objects = (
+			C35FD03B0BD03D5D00408EBE /* minihost.cpp:152 */,
+			C35FD03F0BD03D6E00408EBE /* minihost.cpp:137 */,
+		);
+	};
+	C3D571A90B4DBBFD00637740 /* MissWatson */ = {
+		isa = PBXExecutable;
+		activeArgIndex = 0;
+		activeArgIndices = (
+			YES,
+			YES,
+			YES,
+		);
+		argumentStrings = (
+			"--plugin=jvstwrapper.vst",
+			"--verbose",
+			"--info",
+		);
+		autoAttachOnCrash = 1;
+		configStateDict = {
+			"PBXLSLaunchAction-0" = {
+				PBXLSLaunchAction = 0;
+				PBXLSLaunchStartAction = 1;
+				PBXLSLaunchStdioStyle = 2;
+				PBXLSLaunchStyle = 0;
+				class = PBXLSRunLaunchConfig;
+				displayName = "Executable Runner";
+				identifier = com.apple.Xcode.launch.runConfig;
+				remoteHostInfo = "";
+				startActionInfo = "";
+			};
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		launchableReference = C3D571AA0B4DBBFD00637740 /* MissWatson */;
+		libgmallocEnabled = 0;
+		name = MissWatson;
+		savedGlobals = {
+		};
+		sourceDirectories = (
+			/Users/martindl/workspace/jvst_native/src/src/mac_debug_host,
+			/Users/martindl/workspace/jvst_native/src/src,
+			/Users/martindl/workspace/jvst_native/src/src/pluginterfaces/vst2.x,
+			/Users/martindl/workspace/jvst_native/src/src/public.sdk/vst2.x,
+			/Users/martindl/workspace/jvst_native/src/src/vstgui,
+		);
+		startupPath = /Users/martindl/workspace/jvst_native/src/build/Debug;
+		variableFormatDictionary = {
+		};
+	};
+	C3D571AA0B4DBBFD00637740 /* MissWatson */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = "compiled.mach-o.executable";
+		name = MissWatson;
+		path = /Users/martindl/bin/MissWatson;
+		sourceTree = "<absolute>";
+	};
+}

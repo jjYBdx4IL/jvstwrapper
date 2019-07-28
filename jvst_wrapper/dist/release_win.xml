@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly>
+	<id>win</id>
+	<formats>
+		<format>zip</format>
+	</formats>
+ 
+	<moduleSets>
+		<moduleSet>
+			<includes>
+				<include>net.sourceforge.jvstwrapper:jVSTsYstem</include>
+				<include>net.sourceforge.jvstwrapper:jVSTwRapper</include>
+				<include>net.sourceforge.jvstwrapper:jVSTeXamples</include>
+			</includes>	
+			
+			<binaries>
+				<includeDependencies>false</includeDependencies>
+				<outputDirectory></outputDirectory>
+				<unpack>false</unpack>
+			</binaries>
+		</moduleSet>
+	</moduleSets>
+
+	<files>
+		<file>
+			<source>../../jvst_native/src/Release/jVSTwRapper.dll</source>
+			<outputDirectory></outputDirectory>
+			<destName>jVSTwRapper-${project.version}.dll</destName>
+		</file>
+		<file>
+			<source>../../jvst_native/src/src/conf/jVSTwRapper_win.ini</source>
+			<outputDirectory></outputDirectory>
+			<destName>jVSTwRapper-${project.version}.ini</destName>
+		</file>
+		<file>
+			<source>../../jvst_examples/target/jVSTeXamples-${project.version}-sources.jar</source>
+			<outputDirectory></outputDirectory>
+			<destName>jVSTeXamples-${project.version}-sources.zip</destName>
+		</file>
+		<file>
+			<source>fb.jpg</source>
+			<outputDirectory></outputDirectory>
+		</file>
+		<file>
+			<source>style.css</source>
+			<outputDirectory></outputDirectory>
+		</file>
+		<file>
+			<source>../../jvst_native/src/AUTHORS.txt</source>
+			<outputDirectory></outputDirectory>
+		</file>
+		<file>
+			<source>../../jvst_native/src/LICENSE.txt</source>
+			<outputDirectory></outputDirectory>
+		</file>
+		<file>
+			<source>../../jvst_examples/target/jVSTeXamples-${project.version}-javadoc.jar</source>
+			<outputDirectory></outputDirectory>
+		</file>
+		<file>
+			<source>../../jvst_system/target/jVSTsYstem-${project.version}-javadoc.jar</source>
+			<outputDirectory></outputDirectory>
+		</file>
+		<file>
+			<source>../../jvst_wrapper/target/jVSTwRapper-${project.version}-javadoc.jar</source>
+			<outputDirectory></outputDirectory>
+		</file>
+		<file>
+			<source>ChangeLog.txt</source>
+			<outputDirectory></outputDirectory>
+		</file>
+		<file>
+			<source>READ_ME.html</source>
+			<outputDirectory></outputDirectory>
+		</file>
+	</files>
+
+</assembly>

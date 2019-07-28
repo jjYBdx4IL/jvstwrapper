@@ -1,0 +1,19 @@
+Main Development and Project Lead: 
+	Daniel Martin [daniel309@users.sourceforge.net]
+
+Native GUI integration on windows and many bug fixes: 
+	Daniel Reinert
+
+Initial port to Mac OSX: 
+	Gerard Roma, 
+	Michael from LevelGroundMedia.com
+	
+Mac OSX testing and gc fix / Many hints to solve java gui problems on OSX
+	Normen Hansen (http://software.bitwaves.de/MusicBeam.html)
+	
+Fix for threading bug (initially discovered on CubaseSX on Mac OSX)
+	Tim Hoffmann
+	
+VST-AU bridge 
+	We are kindly allowed to distribute a binary version of VSTAU with the Mac OSX version of jVSTwRapper. 
+	Seth Kingsley (http://code.google.com/p/vstau/)

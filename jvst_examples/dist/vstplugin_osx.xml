@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly>
+	<id>osx</id>
+	<formats>
+<!--		<format>dir</format> -->
+		<format>zip</format>
+	</formats>
+	<includeBaseDirectory>false</includeBaseDirectory>
+ 
+	<dependencySets>
+		<dependencySet>
+		  <outputDirectory>jaydlay.vst/Contents/Resources/</outputDirectory>
+		</dependencySet>
+	</dependencySets>
+
+	<fileSets>
+		<fileSet>
+			<directory>osx/jVSTwRapper/jvstwrapper.vst/</directory>
+			<outputDirectory>jaydlay.vst</outputDirectory>
+			<excludes>
+				<exclude>**/*.jar</exclude>
+				<exclude>**/*.plist</exclude>
+				<exclude>**/*.ini</exclude>
+			</excludes>
+			<useStrictFiltering>true</useStrictFiltering>
+			<useDefaultExcludes>false</useDefaultExcludes>
+		</fileSet>
+		
+<!--		
+		<fileSet>
+			<directory>osx/__MACOSX</directory>
+			<outputDirectory>__MACOSX</outputDirectory>
+			<useDefaultExcludes>false</useDefaultExcludes>
+		</fileSet>	
+-->
+	</fileSets>
+
+	<files>
+		<file>
+			<source>osx/Info.plist</source>
+			<outputDirectory>jaydlay.vst/Contents/</outputDirectory>
+		</file>
+		<file>
+			<source>osx/libjvstwrapper.jnilib.ini</source>
+			<outputDirectory>jaydlay.vst/Contents/Resources/</outputDirectory>
+		</file>
+	</files>
+	
+</assembly>

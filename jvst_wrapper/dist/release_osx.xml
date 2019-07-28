@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly>
+	<id>osx</id>
+	<formats>
+<!-- 		
+		*** STUPID MAVEN LOOSES ALL FILE ATTRIBUTES WHEN ZIPPING ***
+		<format>zip</format>
+-->
+		<format>dir</format>
+	</formats>
+	<includeBaseDirectory>false</includeBaseDirectory>
+ 
+	<moduleSets>
+		<moduleSet>
+			<includes>
+				<include>net.sourceforge.jvstwrapper:jVSTsYstem</include>
+				<include>net.sourceforge.jvstwrapper:jVSTwRapper</include>
+				<include>net.sourceforge.jvstwrapper:jVSTeXamples</include>
+			</includes>	
+			
+			<binaries>
+				<includeDependencies>false</includeDependencies>
+				<outputDirectory>jvstwrapper.vst/Contents/Resources/</outputDirectory>
+				<unpack>false</unpack>
+			</binaries>
+		</moduleSet>
+	</moduleSets>
+
+	<fileSets>
+		<fileSet>
+			<directory>../../jvst_native/src/build/Release/jvstwrapper.vst/</directory>
+			<outputDirectory>jvstwrapper.vst</outputDirectory>
+			<excludes>
+				<exclude>**/*.jar</exclude>
+				<exclude>**/*.ini</exclude>
+			</excludes>
+			<useStrictFiltering>true</useStrictFiltering>
+			<useDefaultExcludes>false</useDefaultExcludes>
+			<filtered>false</filtered>
+			<directoryMode>0755</directoryMode>
+			<fileMode>0644</fileMode>
+		</fileSet>
+		<fileSet>
+			<directory>../../vstau-read-only/build/Deployment/VSTAU Manager.app/</directory>
+			<outputDirectory>VSTAU Manager.app</outputDirectory>
+			<!--<useStrictFiltering>true</useStrictFiltering>-->
+			<useDefaultExcludes>false</useDefaultExcludes>
+			<filtered>false</filtered>
+			<directoryMode>0755</directoryMode>
+			<fileMode>0644</fileMode>
+		</fileSet>
+	</fileSets>
+
+	<files>
+		<file>
+			<source>../../jvst_native/src/src/conf/libjvstwrapper.jnilib.ini</source>
+			<outputDirectory>jvstwrapper.vst/Contents/Resources/</outputDirectory>
+			<fileMode>0644</fileMode>
+		</file>
+		<file>
+			<source>../../jvst_examples/target/jVSTeXamples-${project.version}-sources.jar</source>
+			<outputDirectory></outputDirectory>
+			<destName>jVSTeXamples-${project.version}-sources.zip</destName>
+			<fileMode>0644</fileMode>
+		</file>
+		<file>
+			<source>fb.jpg</source>
+			<outputDirectory></outputDirectory>
+			<fileMode>0644</fileMode>
+		</file>
+		<file>
+			<source>style.css</source>
+			<outputDirectory></outputDirectory>
+			<fileMode>0644</fileMode>
+		</file>
+		<file>
+			<source>../../jvst_native/src/AUTHORS.txt</source>
+			<outputDirectory></outputDirectory>
+			<fileMode>0644</fileMode>
+		</file>
+		<file>
+			<source>../../jvst_native/src/LICENSE.txt</source>
+			<outputDirectory></outputDirectory>
+			<fileMode>0644</fileMode>
+		</file>
+		<file>
+			<source>../../jvst_examples/target/jVSTeXamples-${project.version}-javadoc.jar</source>
+			<outputDirectory></outputDirectory>
+			<fileMode>0644</fileMode>
+		</file>
+		<file>
+			<source>../../jvst_system/target/jVSTsYstem-${project.version}-javadoc.jar</source>
+			<outputDirectory></outputDirectory>
+			<fileMode>0644</fileMode>
+		</file>
+		<file>
+			<source>../../jvst_wrapper/target/jVSTwRapper-${project.version}-javadoc.jar</source>
+			<outputDirectory></outputDirectory>
+			<fileMode>0644</fileMode>
+		</file>
+		<file>
+			<source>ChangeLog.txt</source>
+			<outputDirectory></outputDirectory>
+			<fileMode>0644</fileMode>
+		</file>
+		<file>
+			<source>../../jvst_native/src/Readme_mac.txt</source>
+			<outputDirectory></outputDirectory>
+			<fileMode>0644</fileMode>
+		</file>
+		<file>
+			<source>READ_ME.html</source>
+			<outputDirectory></outputDirectory>
+			<fileMode>0644</fileMode>
+		</file>
+
+
+
+		<file>
+			<source>../../jvst_native/src/build/Release/.DS_Store</source>
+			<outputDirectory></outputDirectory>
+			<fileMode>0644</fileMode>
+		</file>
+<!-- 
+		<file>
+			<source>../../jvst_native/src/build/Release/jvstwrapper.vst/Icon</source>
+			<outputDirectory>jvstwrapper.vst</outputDirectory>
+			<destName>Icon\R</destName>
+			<fileMode>0644</fileMode>
+		</file>
+		<file>
+			<source>../../jvst_native/src/build/Release/jvstwrapper.vst/Contents/PkgInfo</source>
+			<outputDirectory>jvstwrapper.vst/Contents/</outputDirectory>
+			<fileMode>0755</fileMode>
+		</file>
+-->
+		<file>
+			<source>../../jvst_native/src/build/Release/jvstwrapper.vst/Contents/MacOS/libjvstwrapper.jnilib</source>
+			<outputDirectory>jvstwrapper.vst/Contents/MacOS/</outputDirectory>
+			<fileMode>0755</fileMode>
+		</file>
+
+
+
+		<file>
+			<source>../../vstau-read-only/build/Deployment/VSTAU Manager.app/Contents/MacOS/VSTAU Manager</source>
+			<outputDirectory>VSTAU Manager.app/Contents/MacOS/</outputDirectory>
+			<fileMode>0755</fileMode>
+		</file>
+		<file>
+			<source>../../vstau-read-only/build/Deployment/VSTAU Manager.app/Contents/Resources/VSTAU.component/Contents/MacOS/VSTAU</source>
+			<outputDirectory>VSTAU Manager.app/Contents/Resources/VSTAU.component/Contents/MacOS/</outputDirectory>
+			<fileMode>0755</fileMode>
+		</file>
+
+	</files>
+	
+</assembly>
