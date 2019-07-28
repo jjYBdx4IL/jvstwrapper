@@ -6,6 +6,6 @@ Purpose: recompile the dll to 64-bit for MS Windows.
 
 Here is an untested release of the 64-bit dll:
 
-[jVSTwRapper.dll](jVSTwRapper.dll)
+[jVSTwRapper.dll](jVSTwRapper.dll?raw=true)
 
 Use at your own risk.
