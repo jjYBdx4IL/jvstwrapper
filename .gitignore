@@ -6,3 +6,6 @@ jvst_native/*.so
 */.classpath
 */.project
 */target/
+/.settings/
+/.project
+/.classpath

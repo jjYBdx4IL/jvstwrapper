@@ -1,85 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project>
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>net.sourceforge.jvstwrapper</groupId>
-	<artifactId>jVSTeXamples</artifactId>
-	<name>jVSTeXamples</name>
-	<version>1.0beta</version>
-	<url>http://jvstwrapper.sourceforge.net/</url>
-	<packaging>jar</packaging>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>net.sourceforge.jvstwrapper</groupId>
+    <artifactId>jvstexamples</artifactId>
+    <name>jVSTeXamples</name>
+    <version>1.0-SNAPSHOT</version>
+    <url>http://jvstwrapper.sourceforge.net/</url>
+    <packaging>jar</packaging>
 
-	<!--
-	<parent>
-		<groupId>net.sourceforge.jvstwrapper</groupId>
-		<artifactId>jVSTwRapper-Release</artifactId>
-		<version>0.9g</version>
-		<relativePath>../jvst_wrapper/dist</relativePath>
-	</parent>
-	-->
-	
-	<licenses>
-		<license>
-		<name>GNU Lesser General Public License</name>
-		<url>http://www.gnu.org/licenses/lgpl.txt</url>
-		</license>
-	</licenses>
+    <properties>
+        <default.encoding>UTF-8</default.encoding>
+        <project.build.sourceEncoding>${default.encoding}</project.build.sourceEncoding>
+    </properties>
 
-	<scm>
-    	<connection>scm:cvs:pserver:anonymous:@jvstwrapper.cvs.sourceforge.net:/cvsroot/jvstwrapper:jvst_examples</connection>
-    	<url>http://jvstwrapper.cvs.sourceforge.net/jvstwrapper/jvst_examples/</url>
-  	</scm>
-    
-	<distributionManagement>
-		<repository>
-			<id>jvstwrapper-repo</id>
-			<url>scp://shell.sourceforge.net/home/groups/j/jv/jvstwrapper/htdocs/maven2/</url>
-		</repository>
-	</distributionManagement>
+    <licenses>
+        <license>
+            <name>GNU Lesser General Public License</name>
+            <url>http://www.gnu.org/licenses/lgpl.txt</url>
+        </license>
+    </licenses>
 
-	<build>
-		<sourceDirectory>src</sourceDirectory>
-			
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<source>1.4</source>
-					<target>1.4</target>
-				</configuration>
-			</plugin>
-			
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-source-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>attach-sources</id>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
-	
-	<dependencies>
-		<dependency>
-			<groupId>net.sourceforge.jvstwrapper</groupId>
-			<artifactId>jVSTsYstem</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>net.sourceforge.jvstwrapper</groupId>
-			<artifactId>jVSTwRapper</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>net.sourceforge.napkinlaf</groupId>
-			<artifactId>napkinlaf</artifactId>
-			<version>1.0</version>
-		</dependency>
-	</dependencies>
-	
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>net.sourceforge.jvstwrapper</groupId>
+            <artifactId>jvstsystem</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sourceforge.jvstwrapper</groupId>
+            <artifactId>jvstwrapper</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sf.squirrel-sql.thirdparty-non-maven</groupId>
+            <artifactId>napkinlaf</artifactId>
+            <version>1.2</version>
+        </dependency>
+    </dependencies>
+
 </project>
