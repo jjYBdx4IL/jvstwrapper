@@ -431,7 +431,7 @@ char* readJVMLibLocation(char* requestedJVMVersion) {
   	else {
   		char* tmp = (char *)malloc(1024);
   		strncpy(tmp, pPath, 1023);
-  		strcat(tmp,"/lib/i386/client/libjvm.so\0");
+  		strcat(tmp,"/lib/server/libjvm.so\0");
   		return strdup(tmp);
   	}
 }
