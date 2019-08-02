@@ -1,3 +1,4 @@
 jvst_native/src/.vs/
 jvst_native/src/Debug/
 jvst_native/src/x64/
+jvst_native/*.so

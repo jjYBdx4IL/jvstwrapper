@@ -16,7 +16,10 @@ INCLUDES=-I/usr/include -I./src/src/public.sdk/vst2.x -I./src/src/ladspa \
 	-I$(JAVA_HOME)/include/win32 \
 	-I./src/src/pluginterfaces/vst2.x -I./src/src \
 	-L$(JAVA_HOME)/jre/lib -L$(JAVA_HOME)/jre/lib/i386 \
-	-L$(JAVA_HOME)/jre/lib/i386/xawt
+	-L$(JAVA_HOME)/jre/lib/i386/xawt \
+	-L$(JAVA_HOME)/lib
+CXXFLAGS=-shared -fPIC -DPIC -DLINUX=1 -DMOTIF=1 -O2 -ldl -lX11 -lXpm -ljawt -s \
+	-fvisibility=hidden -fvisibility-inlines-hidden -fpermissive
 
 all:	release
 
@@ -35,9 +38,7 @@ debug:
 	
 	
 release:
-	g++ -o bin/jvstwrapper.so -shared -fPIC -DPIC -DLINUX=1 -DMOTIF=1 -O2 -ldl -lX11 -lXpm -ljawt -lmawt -s \
-	-fvisibility=hidden -fvisibility-inlines-hidden \
-	$(INCLUDES) \
+	g++ -o jvstwrapper.so $(CXXFLAGS) $(INCLUDES) \
 	src/src/jVSTwRapperMAIN.cpp src/src/ConfigFileReader.cpp src/src/JNIUtils.cpp \
 	src/src/VSTV10ToHost.cpp src/src/VSTV10ToPlug.cpp src/src/VSTV20ToHost.cpp \
 	src/src/VSTV20ToPlug.cpp src/src/VSTV21ToHost.cpp src/src/VSTV21ToPlug.cpp \
@@ -49,5 +50,5 @@ release:
 	
 	
 clean:
-	rm -f bin/*.so 		
+	rm -f *.so 		
 	
