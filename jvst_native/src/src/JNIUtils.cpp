@@ -379,7 +379,7 @@ char* readJVMLibLocation(char* requestedJVMVersion, char* customRegKey) {
 		log("Trying to locate custom jvm location from registry with key=%s", customRegKey);
 
 		//check if this key is available
-		rc = RegOpenKeyEx(HKEY_LOCAL_MACHINE, customRegKey, 0, KEY_ALL_ACCESS, &regKey);
+		rc = RegOpenKeyEx(HKEY_LOCAL_MACHINE, customRegKey, 0, KEY_QUERY_VALUE, &regKey);
 		if (rc != ERROR_SUCCESS) return NULL;
 	}
 	else if (requestedJVMVersion!=NULL) {
@@ -391,17 +391,19 @@ char* readJVMLibLocation(char* requestedJVMVersion, char* customRegKey) {
 		log("Trying to locate specific jvm version with regkey=%s", jvmRegKey);
 
 		//check if this key is available
-		rc = RegOpenKeyEx(HKEY_LOCAL_MACHINE, jvmRegKey, 0, KEY_ALL_ACCESS, &regKey);
+		rc = RegOpenKeyEx(HKEY_LOCAL_MACHINE, jvmRegKey, 0, KEY_QUERY_VALUE, &regKey);
 		if (rc != ERROR_SUCCESS) return NULL;
 	}
 	else {
 		//Auto check for installed JVMs
-		rc = RegOpenKeyEx(HKEY_LOCAL_MACHINE, "Software\\JavaSoft\\Java Runtime Environment", 0, KEY_ALL_ACCESS, &regKey);
+		rc = RegOpenKeyEx(HKEY_LOCAL_MACHINE, TEXT("SOFTWARE\\JavaSoft\\Java Runtime Environment"), 0, KEY_QUERY_VALUE, &regKey);
+		log("rc1=%i", rc);
 		if (rc!=ERROR_SUCCESS) return NULL;
 
 		char currentVersion[64];
 		len = sizeof(currentVersion);
-		rc = RegQueryValueEx(regKey, "CurrentVersion", 0, &dwType, (unsigned char*)currentVersion, &len);
+		rc = RegQueryValueEx(regKey, TEXT("CurrentVersion"), 0, &dwType, (unsigned char*)currentVersion, &len);
+		log("rc2=%i", rc);
 		if (rc!=ERROR_SUCCESS) return NULL;
 
 		char jvmRegKey[512] = {'\0'};
@@ -410,12 +412,14 @@ char* readJVMLibLocation(char* requestedJVMVersion, char* customRegKey) {
 
 		log("default jvm is at regkey=%s", jvmRegKey);
 
-		rc = RegOpenKeyEx(HKEY_LOCAL_MACHINE, jvmRegKey, 0, KEY_ALL_ACCESS, &regKey);
+		rc = RegOpenKeyEx(HKEY_LOCAL_MACHINE, jvmRegKey, 0, KEY_QUERY_VALUE, &regKey);
+		log("rc3=%i", rc);
 		if (rc!=ERROR_SUCCESS) return NULL;
 	}
 
 	len = sizeof(javaLibLocation);
 	rc = RegQueryValueEx(regKey, "RuntimeLib", 0, &dwType, (unsigned char*)javaLibLocation, &len);
+	log("rc4=%i", rc);
 
 	if (rc==ERROR_SUCCESS) return strdup(javaLibLocation);
 	else return NULL;

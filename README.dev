@@ -1,0 +1,3 @@
+## Windows
+
+class path config option in ini file is platform-dependent (: bs ; classpath separators).
