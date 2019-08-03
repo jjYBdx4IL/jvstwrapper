@@ -65,21 +65,21 @@ jvalue JNU_CallJavaMethod(	JNIEnv *env,
 
 int log(const char* c, ...);
 char *trim (char *string);
-char *replace(char *string, char *oldpiece, char *newpiece);
+char *replace(const char *string, const char *oldpiece, char *newpiece);
 bool checkException(JNIEnv *env);
 bool checkAndThrowException(JNIEnv *env);
 JNIEnv* ensureJavaThreadAttachment(JavaVM* vm);
 
 
 #ifdef WIN32
-	//stuff to load the jvm.dll dynamically
 	//this removes the need to add the path to jvm.dll to the PATH variable
+	//stuff to load the jvm.dll dynamically
 	int initJVMFunctionPointers(char *vmlibpath);
 	char* readJVMLibLocation(char* requestedJVMVersion, char* customRegKey);
 #endif
 #ifdef linux
 	//stuff to load the jvm.dll dynamically
-	int initJVMFunctionPointers(char *vmlibpath);
+	int initJVMFunctionPointers(const char *vmlibpath);
 	char* readJVMLibLocation(char* requestedJVM);
 	
 	char* find_exe_for_symbol (const void *symbol);

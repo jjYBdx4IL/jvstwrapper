@@ -143,7 +143,7 @@ int log(const char* data, ...) {
 			fprintf(log_stream, "\nThread=%i: %s", GetCurrentThreadId(), message);
 #endif
 #if defined(MACX) || defined(linux)
-			fprintf(log_stream, "\nThread=%i: %s", pthread_self(), message);
+			fprintf(log_stream, "\nThread=%li: %s", pthread_self(), message);
 #endif
 			fflush(log_stream);
 			retval = 0;
@@ -153,7 +153,7 @@ int log(const char* data, ...) {
 			fprintf(stderr, "\nThread=%i: %s", GetCurrentThreadId(), message);
 #endif
 #if defined(MACX) || defined(linux)
-			fprintf(stderr, "\nThread=%i: %s", pthread_self(), message);
+			fprintf(stderr, "\nThread=%li: %s", pthread_self(), message);
 #endif
 			fflush(stderr);
 			retval = 0;
@@ -227,7 +227,7 @@ char *trim (char *string) {
 }
 
 
-char *replace(char *string, char *oldpiece, char *newpiece) {
+char *replace(const char *string, const char *oldpiece, char *newpiece) {
    int str_index, newstr_index, oldpiece_index, end, new_len, old_len, cpy_len;
    char *c;
    char newstring[JVST_PATH_MAX];
@@ -450,7 +450,7 @@ jint (JNICALL *PTR_CreateJavaVM)(JavaVM **, void **, void *) = NULL;
 jint (JNICALL *PTR_GetCreatedJavaVMs)(JavaVM **, jsize, jsize *) = NULL;
 
 
-int initJVMFunctionPointers(char *vmlibpath) {
+int initJVMFunctionPointers(const char *vmlibpath) {
 #ifdef WIN32
 	//load the library
 	//*******************

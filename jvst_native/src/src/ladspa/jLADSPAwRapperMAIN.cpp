@@ -245,10 +245,12 @@ bool LadspaPluginAdapter::Init( unsigned long id ) {
    		return false;
    }
 
-   mDesc.Label = GetStr( effGetEffectName, "jVSTwRapper" );
-   mDesc.Name = GetStr( effGetProductString, "jVSTwRapper" );
-   mDesc.Maker = GetStr( effGetVendorString, "None" );
-   mDesc.Copyright = GetStr( effVendorSpecific, "None" );
+   static char* jVSTwRapper = strdup("jVSTwRapper");
+   static char* None = strdup("None");
+   mDesc.Label = GetStr( effGetEffectName, jVSTwRapper );
+   mDesc.Name = GetStr( effGetProductString, jVSTwRapper );
+   mDesc.Maker = GetStr( effGetVendorString, None );
+   mDesc.Copyright = GetStr( effVendorSpecific, None );
 
    if( !mDesc.Label || !mDesc.Name || !mDesc.Maker || !mDesc.Copyright ) return false;
 

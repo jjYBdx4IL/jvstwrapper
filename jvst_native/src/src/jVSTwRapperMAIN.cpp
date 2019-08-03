@@ -227,7 +227,7 @@ AEffect* jvst_main(audioMasterCallback pAudioMaster) {
 
 #ifdef linux
 	//see if there is a custom JVM we want to load (from the .ini file)!
-	char* jvmLibLocation;
+	const char* jvmLibLocation;
 	jvmLibLocation = cfg->CustomJVMLocation;
 	
 	if (jvmLibLocation==NULL) {
