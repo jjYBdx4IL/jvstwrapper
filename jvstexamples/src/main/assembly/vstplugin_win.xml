@@ -27,6 +27,26 @@
             <outputDirectory></outputDirectory>
             <destName>JayDLay.dll</destName>
         </file>
+        <file>
+            <source>../jVSTwRapper.dll</source>
+            <outputDirectory></outputDirectory>
+            <destName>liquinth.dll</destName>
+        </file>
+        <file>
+            <source>../jVSTwRapper.dll</source>
+            <outputDirectory></outputDirectory>
+            <destName>jayvstxsynth.dll</destName>
+        </file>
+        <file>
+            <source>../jVSTwRapper.dll</source>
+            <outputDirectory></outputDirectory>
+            <destName>ddelay.dll</destName>
+        </file>
+        <file>
+            <source>../jVSTwRapper.dll</source>
+            <outputDirectory></outputDirectory>
+            <destName>dreinulldrei.dll</destName>
+        </file>
     </files>
 
 </assembly>

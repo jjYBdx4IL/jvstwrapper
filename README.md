@@ -24,7 +24,7 @@ has been verified to work. A JDK won't get noticed by the plugin because
 it uses different registry keys than a JRE. However, manually pointing at
 it will work.
 
-See [jaydlay-win.zip](jaydlay-win.zip?raw=true) for an example.
+See [jaydlay-win.zip](jaydlay-win.zip?raw=true) for examples.
 
 ## Linux
 
