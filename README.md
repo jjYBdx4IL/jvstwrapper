@@ -4,6 +4,17 @@ This is a checkout of https://sourceforge.net/projects/jvstwrapper/, executed on
 
 Purpose: recompile the dll to 64-bit.
 
+
+## Caveats
+
+Java does *NOT* support combining its GUI (AWT/Swing) with another GUI instance inside the same process. This means
+that graphical Java VST plugins may either break VST compliance (by requiring to be run in a dedicated process and not in
+the same process as the DAW itself) or either drop graphics support or circumvent the Java provided GUI (for example,
+by using some JNI-glued opengl libs or similar). This renders this whole project somewhat a failure - unless we find
+some alternative and easy GUI solution. Judging by the code, the Steinberg SDK supports cross-platform control widget:
+do we need JNI glue for that to work?
+
+
 ## Windows
 
 Here is a release of the 64-bit dll for Windows:
@@ -26,6 +37,7 @@ it will work.
 
 See [jaydlay-win.zip](jaydlay-win.zip?raw=true) for examples.
 
+
 ## Linux
 
 And here is the 64-bit library for linux (LADSPA, *not* VST):
@@ -34,6 +46,7 @@ And here is the 64-bit library for linux (LADSPA, *not* VST):
 
 The linux lib is known to work with LMMS 1.2 (https://lmms.io/).
 See [jaydlay-linux.zip](jaydlay-linux.zip?raw=true) for a working example.
+
 
 ## Mac
 

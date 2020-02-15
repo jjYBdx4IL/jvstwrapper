@@ -1,3 +1,7 @@
 Get the LMMS app image from: https://lmms.io/download/#linux and start it within this
 directory. You should see "JayDLay 1.0" plugin when opening the LADSPA plugin list in
 that application.
+
+Beware! Java does not support foreign UIs within the same process. It may work on Linux for some time, but
+it can produce random crashes. Check if your DAW supports loading plugins into their own processes if the
+corresponding Java LADSPA plugin comes with its own GUI.

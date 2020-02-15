@@ -31,3 +31,6 @@ The expected directory layout is as follows:
 	
 	
 NOTE 2: If you want to use and distribute your plugin as AUDIO UNIT (AU), follow the steps described at http://jvstwrapper.sourceforge.net/#au
+
+Beware! Java does not support foreign UIs within the same process. Check if your DAW supports loading plugins
+into their own processes if the corresponding Java LADSPA plugin comes with its own GUI.

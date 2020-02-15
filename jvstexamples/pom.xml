@@ -31,7 +31,7 @@
 <!--                         <descriptor>src/main/assembly/vstplugin_osx.xml</descriptor> -->
                         <descriptor>src/main/assembly/vstplugin_linux.xml</descriptor>
                     </descriptors>
-                    <finalName>jaydlay</finalName>
+                    <finalName>jvstexamples</finalName>
                 </configuration>
             </plugin>
         </plugins>
